@@ -1,0 +1,50 @@
+:root {
+	--primary-color: #ff5b6a;
+	--secondary-color: #ffeae3;
+	--third-color: #fffcfe;
+	background-color: var(--third-color);
+}
+
+.block {display: block;}
+.inline-block {display: inline-block;}
+.hide {display: none;}
+
+#header {
+	border-color: var(--primary-color) !important;
+}
+
+#header .header {
+	height: 90px;
+}
+
+#header .logo {
+	cursor: pointer;
+}
+
+#header .quick-access div div{
+	font-size: 24px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 50%;
+	opacity: .7;
+	cursor: pointer;
+}
+
+#header .quick-access div div:hover {
+	opacity: .8;
+}
+
+#footer {
+	background-color: var(--secondary-color);
+}
+
+#footer img {
+	width: 120px;
+}
+
+#footer .info li {
+	font-size: 18px;
+	text-decoration: none;
+}
