@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<div id="menu" class="hide">
+<div id="menu" class="">
    <section class="section-products">
       <div class="container">
          <div class="row justify-content-center text-center">
