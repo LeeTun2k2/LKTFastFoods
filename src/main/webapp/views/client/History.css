@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+   overflow: auto;
+}
+
+body {
+
+    
+    background-color: #ededed;
+}
+
+
+
+.contains {
+    border: 1px solid #80808000;
+    
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 0px 14px 0px grey;
+    background-color: white;
+    margin-top: 170px;
+    margin-left: 350px;
+    font-size: 20px;
+}
+
+.orderInf {
+    margin-top: 30px;
+    margin-left: 10px;
+    
+}
+.orderInf table-orderInf{
+	 text-align: center;
+}
+
+#submit {
+
+    padding: 7px;
+    width: 30%;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    background: #ff4584;
+    margin-left: 400px;
+    font-size: 25px;
+    color: white;
+}
