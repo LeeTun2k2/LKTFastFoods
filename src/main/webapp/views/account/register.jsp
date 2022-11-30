@@ -27,7 +27,8 @@
                 <input name="gender" type="radio" value="Nữ" style="margin:5px 5px 30px 40px">Nữ
                 <input name="gender" type="radio" value="Khác" style="margin:5px 5px 30px 40px">Khác
             </form>
-            
+              <label style="margin-left: -250px;">Tên đăng nhập</label>
+            <input type="text" name="username" style="text-align: center">
            <label style="margin-left: -250px;">Số điện thoại</label>
             <input type="text" name="sdt" style="text-align: center">
             <label style="margin-left: -290px;">Địa chỉ</label>

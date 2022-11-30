@@ -44,7 +44,6 @@
         <label>Tên ngân hàng:</label><input class=" typeCard">
         <label>Số thẻ ngân hàng :</label><input class="numberCard">
         <label>Ngày cấp thẻ(ghi trên thẻ) :</label><input class="dateCard">
-        <label>Họ tên ghi trên thẻ:</label><input class=" nameCard">
         <label>Ngày xuất hóa đơn: </label><input class="dateDH">
         <div class="button">
             <a href=""><button id="submit1">Tiến thành thanh toán </button></a>

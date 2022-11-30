@@ -24,15 +24,11 @@
                     <th>Thành tiền </th>
                 </tr>
             </thead>
-
             <tr style="height:30px">
                 <td></td>
                 <td> </td>
                 <td> </td>
             </tr>
-
-
-
         </table>
         <span class="orderInf">Tổng số tiền đơn hàng :<span class=" totalMonney-orderInf"> </span></span>
         <span class="orderInf">Ngày xuất hóa đơn: <span></span class="date-oerderInf"></span>

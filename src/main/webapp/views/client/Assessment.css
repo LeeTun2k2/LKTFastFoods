@@ -7,9 +7,9 @@
 }
 
 body {
-    background: url(/img/register.jpg);
+
     background-size: cover;
-    overflow: hidden;
+    overflow: auto;
     background-color: #ededed;
 }
 
