@@ -9,6 +9,20 @@
 .inline-block {display: inline-block;}
 .hide {display: none;}
 
+.button
+{
+    padding: 10px;
+    width: 250px;
+    border: none;
+    color: var(--third-color);
+    cursor: pointer;
+    background: var(--primary-color);
+    font-size: 20px;
+    border-radius: 2px;
+}
+
+
+
 #header {
 	border-color: var(--primary-color) !important;
 }
@@ -49,38 +63,19 @@
 	text-decoration: none;
 }
 
-#menu a,
-#menu a:hover {
-    text-decoration: none;
-    color: inherit;
-}
-
-#menu .section-products {
-    padding: 80px 0 54px;
-}
-
-#menu .section-products .header {
-    margin-bottom: 50px;
-}
-
-#menu .section-products .header h3 {
-    font-size: 1rem;
-    font-weight: Bold;
-}
-
-#menu .section-products .single-product {
+#menu .single-product {
     margin-bottom: 26px;
 }
 
-#menu .section-products .single-product .part-1 {
+#menu .single-product .part-1 {
     position: relative;
     max-height: 290px;
     margin-bottom: 20px;
     overflow: hidden;
 }
 
-#menu .section-products .single-product .part-1 .discount,
-#menu .section-products .single-product .part-1 .new {
+#menu .single-product .part-1 .discount,
+#menu .single-product .part-1 .new {
     position: absolute;
     top: 15px;
     left: 20px;
@@ -91,10 +86,10 @@
     font-size: 0.85rem;
 }
 
-#menu .section-products .single-product .part-1 ul {
+#menu  .single-product .part-1 ul {
     position: absolute;
     bottom: -41px;
-    left: 20px;
+    right: 20px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -102,49 +97,44 @@
     transition: bottom 0.5s, opacity 0.5s;
 }
 
-#menu .section-products .single-product:hover .part-1 ul {
+#menu  .single-product:hover .part-1 ul {
     bottom: 30px;
     opacity: 1;
 }
 
-#menu .section-products .single-product .part-1 ul li {
-    display: inline-block;
-    margin-right: 4px;
-}
-
-#menu .section-products .single-product .part-1 ul li a {
+#menu  .single-product .part-1 ul li {
     display: inline-block;
     width: 40px;
     height: 40px;
     line-height: 40px;
-    background-color: #ffffff;
-    color: #444444;
+    background: var(--secondary-color);
     text-align: center;
     box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
     transition: color 0.2s;
 }
 
-#menu .section-products .single-product .part-1 ul li a:hover {
-    color: #fe302f;
+#menu  .single-product .part-1 ul li:hover {
+    color: var(--primary-color);
+    cursor: pointer;
 }
 
-#menu .section-products .single-product .part-2 .product-title {
+#menu  .single-product .part-2 .product-title {
     font-size: 1rem;
 }
 
-#menu .section-products .single-product .part-2 h4 {
+#menu  .single-product .part-2 h4 {
     display: inline-block;
     font-size: 1rem;
 }
 
-#menu .section-products .single-product .part-2 .product-old-price {
+#menu  .single-product .part-2 .product-old-price {
     position: relative;
     padding: 0 7px;
     margin-right: 2px;
     opacity: 0.6;
 }
 
-#menu .section-products .single-product .part-2 .product-old-price::after {
+#menu  .single-product .part-2 .product-old-price::after {
     position: absolute;
     content: "";
     top: 50%;
@@ -155,7 +145,44 @@
     transform: translateY(-50%);
 }
 
-#menu .section-products .single-product .part-2 .product-price {
+#menu .single-product .part-2 .product-price {
 	color: var(--primary-color);
 	font-size: 2rem;
+}
+
+#assessment .rating {
+	width: 250px;
+}
+
+#assessment span.fa.fa-star.checked {
+	color: orange;
+}
+
+#payment label {
+	display: block;
+}
+
+#payment input,
+#assessment input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline-style: none;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+#payment .table-orderInf {
+    text-align: center;
+}
+
+#account input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline-style: none;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+#account .table-orderInf {
+    text-align: center;
 }

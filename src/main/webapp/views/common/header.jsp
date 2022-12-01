@@ -5,10 +5,10 @@
 <!-- Header -->
 	<div class="container header">
 		<div class="row">
-			<div class="inline-block col-5 logo" onclick="location.href='#';">
+			<div class="inline-block col-5 logo" onclick="location.href='/LKTFastFood/views/client/Home.jsp';">
 				<div class="row">
 					<div>
-						<img class="h-100" src="https://www.lotteria.vn/grs-static/images/lotteria_logo.svg" alt="LKTFastFood logo"/>
+						<img class="h-100" src="/LKTFastFood/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
 					</div>
 					<div class="col brand ml-4">
 						<h1 class="brand-name font-weight-bold">LKT FAST FOODS</h1>
@@ -18,7 +18,7 @@
 			</div>
 			<div class="col inline-block d-flex justify-content-end align-items-center quick-access">
 				<div>
-					<div class="border click menu inline-block mx-2"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
+					<div class="menu border click inline-block mx-2"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
 					<div class="history inline-block mx-2"><i class="fa fa-history" aria-hidden="true"></i></div>
 					<div class="assessment inline-block mx-2"><i class="fa fa-star-o" aria-hidden="true"></i></div>
 					<div class="cart inline-block mx-2"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
@@ -27,19 +27,4 @@
 			</div>
 		</div>
 	</div>
-	
-	<script type="text/javascript">
-		const quickAccess = document.querySelectorAll(".quick-access div div")
-		var curr = quickAccess[0]
-		function setBorder(item) {
-			item.onclick = function() {
-				curr.classList.remove("border")
-				curr = item
-				item.classList.add("border")
-				
-				location.href='#';
-			}
-		}
-		quickAccess.forEach(setBorder)
-	</script>
 </header>
