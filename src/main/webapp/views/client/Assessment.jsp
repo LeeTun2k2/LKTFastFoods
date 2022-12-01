@@ -1,51 +1,65 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Đánh giá đơn hàng </title>
-    <link rel="stylesheet" href="Assessment.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
-
-
-</head>
-
-<body>
-    <div class="Register">
-        <div class="form">
-            <h2>Đánh giá đơn hàng </h2>
-
-            <label>Mã khách hàng :</label>
-            <input type="text" name="MaKH" style="text-align: center">
-            <label style="margin-left:-820px;">Mã đơn hàng :</label>
-            <input type="text" style=" text-align: center;" name="MaDH">
-            <div class="stars" style="margin-left:-690px;margin-top: 60px;font-size: 22px"> Chất lượng
-                đơn hàng :
-                <form action="" class="star-item">
-                    <input class="star star-5" id="star-5" type="radio" name="star" />
-                    <label class="star star-5" for="star-5"></label>
-                    <input class="star star-4" id="star-4" type="radio" name="star" />
-                    <label class="star star-4" for="star-4"></label>
-                    <input class="star star-3" id="star-3" type="radio" name="star" />
-                    <label class="star star-3" for="star-3"></label>
-                    <input class="star star-2" id="star-2" type="radio" name="star" />
-                    <label class="star star-2" for="star-2"></label>
-                    <input class="star star-1" id="star-1" type="radio" name="star" />
-                    <label class="star star-1" for="star-1"></label>
-                </form>
-            </div>
-            <a href="./Menu.jsp"><button id="submit">Hoành thành đánh giá</button></a>
-
-
-
+    <div id="assessment" class="py-4 hide">
+        <div class="py-4 container form">
+            <h2 class="text-center">ĐÁNH GIÁ</h2>
+	        <div class="py-4 content row">    
+				<div class="col-7 order-info">
+					<table class="table table-striped">
+			            <thead>
+			                <tr>
+			                	<th scope="col">STT</th>
+			                    <th scope="col">Tên sản phẩm </th>
+			                    <th scope="col">Số lượng</th>
+			                    <th scope="col">Thành tiền </th>
+			                </tr>
+			            </thead>
+				        <tbody>
+				            <tr>
+				            	<th scope="row">1</th>
+				                <td>Gà rán</td>
+				                <td>10</td>
+				                <td>390.000đ</td>
+				            </tr>
+				            
+				            <tr>
+				            	<th scope="row">2</th>
+				                <td>Pepsi</td>
+				                <td>2</td>
+				                <td>24.000đ</td>
+				            </tr>
+				        </tbody>    
+			        </table>
+				</div>
+				
+				<div class="col"></div>
+				<div class="border rounded col-4 rating">
+		            <div class="py-2 row">
+		            	<span class="col fw-bold">Mã khách hàng:</span> 
+		            	<span class="col-3 text-right ClientID">01</span>
+		            </div>
+		            <div class="py-2 row">
+		            	<span class="col fw-bold">Mã đơn hàng:</span> 
+		            	<span class="col-3 text-right OrderID">01</span>
+		            </div>
+		            <div class="stars py-2 row">
+		            	<span class="col">Đánh giá:</span>
+		                <form action="submit" class="col text-right inline-block star">
+		                	<span class="fa fa-star checked" id="star-1"></span>
+							<span class="fa fa-star checked" id="star-2"></span>
+							<span class="fa fa-star checked" id="star-3"></span>
+							<span class="fa fa-star checked" id="star-4"></span>
+							<span class="fa fa-star checked" id="star-5"></span>
+		                </form>
+		            </div>
+		            <div class="py-2 row">
+		            	<label class="col" for="comment">Góp ý</label> 
+		            	<input class="mr-3 col-8 focus" name="comment">
+		            </div>
+		            <div class="my-4 text-center">
+		            	<button id="assessment-submit" type="submit" class="button">Gửi đánh giá</button>
+		            </div>
+	            </div>
+       		</div>
         </div>
     </div>
-</body>
-
-</html>

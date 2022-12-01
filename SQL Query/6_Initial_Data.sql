@@ -9,15 +9,15 @@ exec AddAccount 'client', '123456@Aa', 0, 1
 go
 
 -- Clients
-exec AddClient 'null', N'null', 1, '0', 'null@null.null', N'null'
+exec AddClient 'null', N'null', '1-1-1', 1, '0', 'null@null.null', N'null'
 go
-exec AddClient 'client', N'Lê Quang Tùng', 20, '0961121321', 'letung109922@gmail.com', N'Gia Lai'
+exec AddClient 'client', N'Lê Quang Tùng', '10-7-2002', 0, '0961121321', 'letung109922@gmail.com', N'Gia Lai'
 go
 
 -- Managers
-exec AddManager'null', N'null', 1, '0', 'null@null.null', N'null'
+exec AddManager'null', N'null', '1-1-1', 1, '0', 'null@null.null', N'null'
 go
-exec AddManager'admin', N'Lê Quang Tùng', 20, '0961121321', 'letung109922@gmail.com', N'Gia Lai'
+exec AddManager'admin', N'Lê Quang Tùng', '10-07-2002', 0, '0961121321', 'letung109922@gmail.com', N'Gia Lai'
 go
 
 -- Vouchers
@@ -27,9 +27,9 @@ exec AddVoucher '11-23-2022', '11-24-2022', 50
 go
 
 -- Products
-exec AddProduct N'null', null, 0, 0, 0, 0
+exec AddProduct N'null',null, null, 0, 0, 0, 0
 go
-exec AddProduct N'Pepsi vị chanh không calo', N'Bung cùng rap việt', 1, 5, 10, 1
+exec AddProduct N'Pepsi vị chanh không calo','null', N'Bung cùng rap việt', 1, 5, 10, 1
 go
 
 -- Payment_Method
@@ -44,9 +44,9 @@ go
 exec AddPayment 1, '01-01-2022', 100, N'Chuyển tiền'
 go
 -- Orders
-exec AddOrder 0, 0
+exec AddOrder 0, 0, '1-1-1'
 go
-exec AddOrder 1, 100
+exec AddOrder 1, 100, '12-01-2022'
 go
 
 -- Order_Info
@@ -56,15 +56,9 @@ exec AddOrder_Info 1, 1, 100
 go
 
 -- Assessments
-exec AddAssessment 0, 5
+exec AddAssessment 0, 5, N'Ngon'
 go
-exec AddAssessment 1, 4
-go
-
--- Menu
-exec AddMenu 0
-go
-exec AddMenu 1
+exec AddAssessment 1, 4, N'Tạm'
 go
 
 -- Order_History

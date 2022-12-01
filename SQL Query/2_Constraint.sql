@@ -11,8 +11,7 @@ add constraint checkPassword check (
 go
 
 alter table Managers
-add constraint checkManagerAge check (Age > 0),
-	constraint checkManagerPhoneNumber check (patindex('%[^0-9]%', PhoneNumber) = 0),
+add constraint checkManagerPhoneNumber check (patindex('%[^0-9]%', PhoneNumber) = 0),
 	constraint checkManagerEmail check (
 		Email like '%_@__%.__%' and 
 		Email not like '% %' and 
@@ -21,8 +20,7 @@ add constraint checkManagerAge check (Age > 0),
 go
 
 alter table Clients
-add constraint checkClientAge check (Age > 0),
-	constraint checkClientPhoneNumber check (patindex('%[^0-9]%', PhoneNumber) = 0),
+add constraint checkClientPhoneNumber check (patindex('%[^0-9]%', PhoneNumber) = 0),
 	constraint checkClientEmail check (
 		Email like '%_@__%.__%' and 
 		Email not like '% %' and 
