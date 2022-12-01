@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<div id="payment" class="hide my-4">
-	<div class="container pb-5">
-		<h2 class="py-4 text-center">THANH TOÁN</h2>
+<div id="payment" class="hide py-4">
+	<div class="container py-4">
+		<h2 class="text-center">THANH TOÁN</h2>
 		<div class="my-2 row">
 			<div class="my-2 row col">
 				<label class="col text-right">Họ và tên:</label> <input

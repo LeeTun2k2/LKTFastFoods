@@ -7,7 +7,47 @@
 
 .block {display: block;}
 .inline-block {display: inline-block;}
-.hide {display: none;}
+.hide {display: none !important;}
+.fadeInOut {
+    opacity: 1;
+    animation: fade 5s ease-in-out;
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  25%,75% { opacity: 1 }
+}
+
+.notify {
+	display: block;
+	position: fixed;
+	bottom: 32px;
+	right: 32px;
+	padding: 16px;
+	width: 400px;
+	border: 1px solid;
+	border-radius: 4px;
+	z-index: 9;
+	text-align: center;
+	overflow: hidden;
+	max-height: 90px;
+}
+
+.success {
+	color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.error {
+	color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.warning {
+	color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
 
 .button
 {
@@ -185,4 +225,30 @@
 
 #account .table-orderInf {
     text-align: center;
+}
+
+#cart ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#cart ul li {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+}
+
+#cart ul li.action {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    transition: color 0.2s;
+    border-radius: 2px;
+}
+
+#cart ul li.action:hover {
+    color: var(--primary-color);
+    cursor: pointer;
 }

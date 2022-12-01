@@ -31,7 +31,7 @@ after delete as
 	declare @max int
 	set @max = (select max(ID) from Order_History)
 	begin
-		DBCC CHECKIDENT ('Courses', RESEED, @max);
+		DBCC CHECKIDENT ('Order_History', RESEED, @max);
 	end
 go
 
@@ -40,7 +40,7 @@ after delete as
 	declare @max int
 	set @max = (select max(ID) from Menu)
 	begin
-		DBCC CHECKIDENT ('Courses', RESEED, @max);
+		DBCC CHECKIDENT ('Menu', RESEED, @max);
 	end
 go
 
@@ -49,7 +49,7 @@ after delete as
 	declare @max int
 	set @max = (select max(ID) from Products)
 	begin
-		DBCC CHECKIDENT ('Courses', RESEED, @max);
+		DBCC CHECKIDENT ('Products', RESEED, @max);
 	end
 go
 
@@ -58,7 +58,7 @@ after delete as
 	declare @max int
 	set @max = (select max(ID) from Order_Info)
 	begin
-		DBCC CHECKIDENT ('Courses', RESEED, @max);
+		DBCC CHECKIDENT ('Order_Info', RESEED, @max);
 	end
 go
 
@@ -67,7 +67,7 @@ after delete as
 	declare @max int
 	set @max = (select max(ID) from Orders)
 	begin
-		DBCC CHECKIDENT ('Courses', RESEED, @max);
+		DBCC CHECKIDENT ('Orders', RESEED, @max);
 	end
 go
 
@@ -76,7 +76,7 @@ after delete as
 	declare @max int
 	set @max = (select max(ID) from Assessments)
 	begin
-		DBCC CHECKIDENT ('Courses', RESEED, @max);
+		DBCC CHECKIDENT ('Assessments', RESEED, @max);
 	end
 go
 
@@ -85,7 +85,7 @@ after delete as
 	declare @max int
 	set @max = (select max(ID) from Vouchers)
 	begin
-		DBCC CHECKIDENT ('Courses', RESEED, @max);
+		DBCC CHECKIDENT ('Vouchers', RESEED, @max);
 	end
 go
 
@@ -94,7 +94,7 @@ after delete as
 	declare @max int
 	set @max = (select max(ID) from Payment_Methods)
 	begin
-		DBCC CHECKIDENT ('Courses', RESEED, @max);
+		DBCC CHECKIDENT ('Payment_Methods', RESEED, @max);
 	end
 go
 
@@ -103,6 +103,6 @@ after delete as
 	declare @max int
 	set @max = (select max(ID) from Payments)
 	begin
-		DBCC CHECKIDENT ('Courses', RESEED, @max);
+		DBCC CHECKIDENT ('Payments', RESEED, @max);
 	end
 go

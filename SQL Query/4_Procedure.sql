@@ -32,26 +32,29 @@ go
 -- Clients
 create procedure AddClient 
 	@username varchar(40), 
-	@name nvarchar(40), 
-	@age int, 
+	@name nvarchar(40),
+	@birthdate date, 
+	@gender bit, 
 	@phoneNumber varchar(11), 
 	@email varchar(40), 
 	@address nvarchar(100)
 as
-	insert into Clients values(@username, @name, @age, @phoneNumber, @email, @address)
+	insert into Clients values(@username, @name, @birthdate, @gender, @phoneNumber, @email, @address)
 go
 
 create procedure UpdateClient 
 	@username varchar(40), 
-	@name nvarchar(40), 
-	@age int, 
+	@name nvarchar(40),
+	@birthdate date, 
+	@gender bit, 
 	@phoneNumber varchar(11), 
 	@email varchar(40), 
 	@address nvarchar(100)
 as
 	update Clients 
 	set Name = @name,
-		Age = @age,
+		BirthDate = @birthdate,
+		Gender = @gender,
 		PhoneNumber = @phoneNumber,
 		Email = @email,
 		Address = @address
@@ -86,26 +89,29 @@ go
 -- Managers
 create procedure AddManager
 	@username varchar(40), 
-	@name nvarchar(40), 
-	@age int, 
+	@name nvarchar(40),
+	@birthdate date, 
+	@gender bit, 
 	@phoneNumber varchar(11), 
 	@email varchar(40), 
 	@address nvarchar(100)
 as
-	insert into Managers values(@username, @name, @age, @phoneNumber, @email, @address)
+	insert into Managers values(@username, @name, @birthdate, @gender, @phoneNumber, @email, @address)
 go
 
 create procedure UpdateManager
 	@username varchar(40), 
-	@name nvarchar(40), 
-	@age int, 
+	@name nvarchar(40),
+	@birthdate date, 
+	@gender bit, 
 	@phoneNumber varchar(11), 
 	@email varchar(40), 
 	@address nvarchar(100)
 as
 	update Managers 
 	set Name = @name,
-		Age = @age,
+		BirthDate = @birthdate,
+		Gender = @gender,
 		PhoneNumber = @phoneNumber,
 		Email = @email,
 		Address = @address
@@ -174,18 +180,20 @@ go
 -- Products
 create procedure AddProduct 
 	@name nvarchar(40),
+	@image image,
 	@description nvarchar(40),
 	@status bit,
 	@importPrice int,
 	@exportPrice int,
 	@voucherID int
 as
-	insert into Products values(@name, @description, 0, @status, @importPrice, @exportPrice, @voucherID)
+	insert into Products values(@name, @image, @description, 0, @status, @importPrice, @exportPrice, @voucherID)
 go
 
 create procedure UpdateProduct 
 	@ID int,
 	@name nvarchar(40),
+	@image image,
 	@description nvarchar(40),
 	@status bit,
 	@importPrice int,
@@ -194,6 +202,7 @@ create procedure UpdateProduct
 as
 	update Products 
 	set Name = @name,
+		Image = @image,
 		Description = @description,
 		Status = @status,
 		Import_Price = @importPrice,
@@ -353,16 +362,17 @@ go
 
 
 -- Orders
-create procedure AddOrder @paymentID int, @amount int
+create procedure AddOrder @paymentID int, @amount int, @date date
 as
-	insert into Orders values(@paymentID, @amount)
+	insert into Orders values(@paymentID, @amount, @date)
 go
 
-create procedure UpdateOrder @id int, @paymentID int, @amount int
+create procedure UpdateOrder @id int, @paymentID int, @amount int, @date date
 as
 	update Orders 
 	set Payment_ID = @paymentID,
-		Amount = @amount
+		Amount = @amount,
+		Date = @date
 	where ID = @id
 go
 
@@ -400,16 +410,17 @@ go
 
 
 -- Assessments
-create procedure AddAssessment @orderID int, @stars float
+create procedure AddAssessment @orderID int, @stars float, @comment nvarchar(200)
 as
-	insert into Assessments values(@orderID, @stars)
+	insert into Assessments values(@orderID, @stars, @comment)
 go
 
-create procedure UpdateAssessment @id int, @orderID int, @stars float
+create procedure UpdateAssessment @id int, @orderID int, @stars float, @comment nvarchar(200)
 as
 	update Assessments 
 	set Order_ID = @orderID,
-		Stars = @stars
+		Stars = @stars,
+		Comment = @comment
 	where ID = @id
 go
 
@@ -429,40 +440,6 @@ as
 	select * from Assessments
 	where ID = @id
 go
-
-
-
--- Menu
-create procedure AddMenu @productID int
-as
-	insert into Menu values(@productID)
-go
-
-create procedure UpdateMenu @id int, @productID int
-as
-	update Menu 
-	set Product_ID = @productID
-	where ID = @id
-go
-
-create procedure DeleteMenu @id int
-as
-	delete from Menu
-	where ID = @id
-go
-
-create procedure GetAllMenu
-as 
-	select * from Menu
-go
-
-create procedure GetOneMenu @id int
-as 
-	select * from Menu
-	where ID = @id
-go
-
-
 
 -- Order_History
 create procedure AddOrder_History @clientID varchar(40), @orderID int

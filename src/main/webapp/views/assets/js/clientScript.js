@@ -1,14 +1,20 @@
-var alerts={
-	'success':document.getElementById("success-alert")
+const notifies = {
+	"success": document.querySelector(".notify.success"),
+	"warning": document.querySelector(".notify.warning"),
+	"error": document.querySelector(".notify.error")
 }
 
-function showAlert(type, message="") {
-	if (type)
-    	alerts[type].fadeTo(2000, 500).slideUp(500, function() {
-      		alerts[type].slideUp(500);
-	});
+function showNotify(type, message){
+	if (type in notifies)
+	{
+		notifies[type].childNodes[3].innerText = message
+		notifies[type].classList.remove("hide")
+		setTimeout(()=>{
+			notifies[type].classList.add("hide")
+		}, 5000)
+	}
 }
-    
+
 // header
 var pages = {}
 const quickAccess = document.querySelectorAll(".quick-access div div")
@@ -28,6 +34,13 @@ function setBorder(item) {
 }
 quickAccess.forEach(setBorder)
 
+// menu
+const menuAddProducts = document.querySelectorAll("#menu  .single-product .part-1 ul li")
+menuAddProducts.forEach((item)=>{
+	item.onclick=()=>{
+		
+	}
+})
 
 
 // assessment
@@ -47,19 +60,25 @@ ratingStars.forEach(rating)
 // button assessment-submit
 const assessmentSubmit = document.getElementById("assessment-submit")
 assessmentSubmit.onclick=()=>{
-	alert("assessment-submit")
+	showNotify("success", "Đánh giá thành công.")
 }
 
 // accounts
 // button rollback
 const accountRollback = document.getElementById("account-rollback")
-assessmentSubmit.onclick=()=>{
-	alert("account-rollback")
+accountRollback.onclick=()=>{
+	showNotify("warning", "Không có thông tin nào thay đỏi.")
 }
 
 // button submit
 const accountSubmit = document.getElementById("account-submit")
-assessmentSubmit.onclick=()=>{
-	showAlert("success")
+accountSubmit.onclick=()=>{
+	showNotify("success", "Cập nhật thông tin thành công.")
 }
+
+
+
+
+
+
 

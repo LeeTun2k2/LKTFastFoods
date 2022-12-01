@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <div id="assessment" class="hide">
+    <div id="assessment" class="py-4 hide">
         <div class="py-4 container form">
-            <h2 class="mb-4 text-center">ĐÁNH GIÁ</h2>
-	        <div class="content row">    
+            <h2 class="text-center">ĐÁNH GIÁ</h2>
+	        <div class="py-4 content row">    
 				<div class="col-7 order-info">
 					<table class="table table-striped">
 			            <thead>
