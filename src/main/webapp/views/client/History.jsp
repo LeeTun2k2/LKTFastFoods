@@ -41,7 +41,6 @@
 	                <td>24.000đ</td>
 	            </tr>
 	        </tbody>    
-	        
         </table>
         <div class="py-4 container footer">
         	<div>

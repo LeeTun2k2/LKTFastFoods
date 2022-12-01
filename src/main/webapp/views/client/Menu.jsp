@@ -36,5 +36,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- partial -->
 </div>
