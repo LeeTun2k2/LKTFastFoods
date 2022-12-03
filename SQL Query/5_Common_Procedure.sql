@@ -28,11 +28,3 @@ as
 	exec AddAccount @username, @password, 0, 1
 	exec AddManager @username, @name, @birthDate, @gender, @phoneNumber, @email, @address
 go
-
-create procedure LoadAllProductInMenu
-as
-	select Products.ID, Products.Name, Products.Image, Products.Description, Products.Export_Price, Products.Amount, Vouchers.Discount
-	from Products
-	inner join Vouchers 
-	on Products.Voucher_ID = Vouchers.ID
-go

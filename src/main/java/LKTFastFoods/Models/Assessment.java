@@ -13,7 +13,6 @@ public class Assessment{
 	private int order_id;
 	private float star;
 	private String comment;
-	
 	public int getId() {
 		return id;
 	}
@@ -38,4 +37,6 @@ public class Assessment{
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
+	
+
 }

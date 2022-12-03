@@ -16,11 +16,11 @@ go
 create table Clients(
 	Username varchar(40) primary key references Accounts(Username),
 	Name nvarchar(40) not null,
-	BirthDate date not null,
+	BirthDate date,
 	Gender bit not null,
-	PhoneNumber varchar(11) not null,
-	Email varchar(40) not null,
-	Address nvarchar(100) not null,
+	PhoneNumber varchar(11),
+	Email varchar(40),
+	Address nvarchar(100)
 )
 go
 
@@ -30,9 +30,9 @@ create table Managers(
 	Name nvarchar(40) not null,
 	BirthDate date,
 	Gender bit not null,
-	PhoneNumber varchar(11) not null,
-	Email varchar(40) not null,
-	Address nvarchar(100) not null
+	PhoneNumber varchar(11),
+	Email varchar(40),
+	Address nvarchar(100)
 )
 go
 
@@ -49,8 +49,8 @@ go
 create table Products(
 	ID int identity(0,1) primary key,
 	Name nvarchar(40) not null,
-	Image image not null,
-	Description nvarchar(100) not null,
+	Image image,
+	Description nvarchar(100),
 	Amount int not null,
 	Status bit not null,
 	Import_Price int not null,
@@ -74,7 +74,7 @@ create table Payments(
 	Method_ID int references Payment_Methods(ID),
 	DateDone date not null,
 	Amount int not null,
-	Description nvarchar(100) not null
+	Description nvarchar(100)
 )
 go
 
@@ -90,8 +90,8 @@ go
 -- Order_Info
 create table Order_Info (
 	ID int identity(0,1) primary key,
-	Product_ID int not null, 
-	Order_ID int not null,
+	Product_ID int, 
+	Order_ID int,
 	Quantity int not null,
 	Amount int not null,
 	foreign key(Product_ID) references Products(ID),
@@ -104,7 +104,7 @@ create table Assessments (
 	ID int identity(0,1) primary key,
 	Order_ID int references Orders(ID),
 	Stars float not null,
-	Comment nvarchar(200) not null
+	Comment nvarchar(200)
 )
 go 
 

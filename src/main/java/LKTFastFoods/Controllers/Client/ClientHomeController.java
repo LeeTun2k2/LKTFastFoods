@@ -26,32 +26,27 @@ import LKTFastFoods.Util.*;
 
 public class ClientHomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-//	AccountService accountService = new AccountService();
-//	AssessmentService assessmentService = new AssessmentService();
-//	ClientService clientService = new ClientService();
-//	Order_HistoryService order_HistoryService = new Order_HistoryService();
-//	Order_InfoService order_InfoService = new Order_InfoService();
-//	OrderService orderService = new OrderService();
-//	Payment_MethodService payment_MethodService = new Payment_MethodService();
-//	PaymentService paymentService = new PaymentService();
-//	ProductService productService = new ProductService();
-//	VoucherService voucherService = new VoucherService();
-	MenuService menuService = new MenuService();
+	AccountService accountService = new AccountService();
+	AssessmentService assessmentService = new AssessmentService();
+	ClientService clientService = new ClientService();
+	Order_HistoryService order_HistoryService = new Order_HistoryService();
+	Order_InfoService order_InfoService = new Order_InfoService();
+	OrderService orderService = new OrderService();
+	Payment_MethodService payment_MethodService = new Payment_MethodService();
+	PaymentService paymentService = new PaymentService();
+	ProductService productService = new ProductService();
+	VoucherService voucherService = new VoucherService();
 	
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		List<Menu> products = menuService.GetAll();
-		for (Menu product : products) {
-			System.out.println(product.toString());
-		}
-		req.setAttribute("products", products);
-	    RequestDispatcher dispatcher = req.getRequestDispatcher("/views/client/Home.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/views/client/Home.jsp");
 		dispatcher.forward(req, resp);
+		System.out.print("11111111111111111111111111111");
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		System.out.print("11111111111111111111111111111");
 	}
 }

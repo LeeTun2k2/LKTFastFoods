@@ -7,6 +7,9 @@ public class Account {
 		this.role = role;
 		this.active = active;
 	}
+	public Account() {
+		
+	}
 	private String username;
 	private String password;
 	private boolean role;
@@ -29,6 +32,8 @@ public class Account {
 	public void setRole(boolean role) {
 		this.role = role;
 	}
+	
+	
 	public boolean isActive() {
 		return active;
 	}

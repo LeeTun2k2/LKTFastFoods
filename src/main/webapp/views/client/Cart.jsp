@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/views/assets/css/clientStyle.css"/>
 <div id="cart" class="py-4">
 	<div class="container py-4">
 		<h2 class="text-center">GIỎ HÀNG</h2>

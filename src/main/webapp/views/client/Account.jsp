@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/views/assets/css/clientStyle.css"/>
 <div id="account" class="py-4 hide">
 	<div class="py-4 container">
 		<h2 class="text-center">THÔNG TIN KHÁCH HÀNG</h2>

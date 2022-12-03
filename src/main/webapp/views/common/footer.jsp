@@ -6,7 +6,7 @@
 			<div class="d-flex justify-content-center col logo">
 				<div>
 					<div class="img d-flex justify-content-center">
-						<img src="/LKTFastFood/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
+						<img src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
 					</div>
 					<div class="py-4 description">
 						<h5>SUBSCRIBE FOR PROMOTIONAL UPDATES</h5>

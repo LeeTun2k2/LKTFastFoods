@@ -5,13 +5,13 @@
 <!-- Header -->
 	<div class="container header">
 		<div class="row">
-			<div class="inline-block col-5 logo" onclick="location.href='/LKTFastFood/views/client/Home.jsp';">
+			<div class="inline-block col-5 logo" onclick="location.href='/LKTFastFood/views/admin/Home.jsp';">
 				<div class="row">
 					<div>
-						<img class="h-100" src="/LKTFastFood/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
+						<img class="h-100" src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
 					</div>
 					<div class="col brand ml-4">
-						<h1 class="brand-name font-weight-bold">LKT FAST FOOD</h1>
+						<h1 class="brand-name font-weight-bold">LKT FAST FOODS</h1>
 						<h6 class="brand-slogan font-weight-light">Mang cả tâm tình trên từng sản phẩm</h6>
 					</div>
 				</div>

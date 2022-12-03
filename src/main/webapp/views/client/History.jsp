@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/assets/css/clientStyle.css"/>
 <div id="history" class="hide">
     <div class="container py-4">
     	<div class="py-4 container header">

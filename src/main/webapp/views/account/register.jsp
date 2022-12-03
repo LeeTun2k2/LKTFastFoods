@@ -5,7 +5,7 @@
 
 <head>
     <title>Đăng kí tài khoản </title>
-    <link rel="stylesheet" href="registerStyle.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/account/registerStyle.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i|Noto+Sans:400,400i,700"
