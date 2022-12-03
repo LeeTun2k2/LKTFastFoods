@@ -27,7 +27,7 @@ exec AddVoucher '11-23-2022', '11-24-2022', 50
 go
 
 -- Products
-exec AddProduct N'null',null, null, 0, 0, 0, 0
+exec AddProduct N'null', 'null', 'null', 0, 0, 0, 0
 go
 exec AddProduct N'Pepsi vị chanh không calo','null', N'Bung cùng rap việt', 1, 5, 10, 1
 go
