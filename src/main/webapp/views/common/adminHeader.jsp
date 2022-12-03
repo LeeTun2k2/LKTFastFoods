@@ -11,7 +11,7 @@
 						<img class="h-100" src="/LKTFastFood/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
 					</div>
 					<div class="col brand ml-4">
-						<h1 class="brand-name font-weight-bold">LKT FAST FOODS</h1>
+						<h1 class="brand-name font-weight-bold">LKT FAST FOOD</h1>
 						<h6 class="brand-slogan font-weight-light">Mang cả tâm tình trên từng sản phẩm</h6>
 					</div>
 				</div>
