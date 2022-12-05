@@ -32,4 +32,12 @@ public class AccountService implements iAccountService {
 	public List<Account> GetAll() {
 		return accountDAO.GetAll();
 	}
+	
+	public Account login(String username, String password) {
+		Account account = this.GetOne(username);
+		if (account!=null && password.equals(account.getPassword())) {
+			return account;
+		}
+		return null;
+	}
 }

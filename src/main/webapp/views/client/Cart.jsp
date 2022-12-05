@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<div id="cart" class="py-4">
+<div id="cart" class="py-4 hide">
 	<div class="container py-4">
 		<h2 class="text-center">GIỎ HÀNG</h2>
 		<table class="my-4 table table-striped">

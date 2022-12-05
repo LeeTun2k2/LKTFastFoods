@@ -10,7 +10,7 @@
 		<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,900&display=swap" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/b029030af9.js"></script>
-		<link rel="stylesheet" href="/LKTFastFood/views/assets/css/clientStyle.css"/>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/views/assets/css/clientStyle.css"/>
 	</head>
 	<body>
 		<!-- announce -->
@@ -40,7 +40,7 @@
 		<!-- Footer -->
 		<%@ include file="/views/common/footer.jsp"%>
 	
-		<script src="/LKTFastFood/views/assets/js/clientData.js"></script>
-		<script src="/LKTFastFood/views/assets/js/clientScript.js"></script>
+		<script src="${pageContext.request.contextPath}/views/assets/js/clientData.js"></script>
+		<script src="${pageContext.request.contextPath}/views/assets/js/clientScript.js"></script>
 	</body>
 </html>
