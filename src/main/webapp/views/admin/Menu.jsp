@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <div id="menu" class="my-4 hide">
 	<div class="container py-4">
 		<h2 class="text-center">QUẢN LÝ MENU</h2>
@@ -21,24 +21,19 @@
 						<th scope="col">Mô tả</th>
 					</tr>
 				</thead>
+				<c:forEach items="${listProduct}" var="x">
 				<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>Gà rán</td>
-						<td>100.000đ</td>
-						<td>70.000đ</td>
-						<td>1</td>
-						<td>Gà rán chấm mắm tôm</td>
-					</tr>
-					<tr>
-						<th scope="row">2</th>
-						<td>Coca hắc ám</td>
-						<td>200.000đ</td>
-						<td>1.000đ</td>
-						<td>2</td>
-						<td>Coca mix trân câu đường đen</td>
-					</tr>
+				<tr>
+				    <td> ${x.getId()}</td>
+				    <td> ${x.getName()}</td>
+				   <td>${x.getImportPrice()}</td>
+				   <td>${x.getExportPrice()}</td> 
+				   <td>${x.getVoucher_id()}</td>
+				   <td>${x.getDescription()}</td>
+				   
+				 </tr>
 				</tbody>
+				</c:forEach>
 			</table>
 
 			<div class="d-flex justify-content-around">

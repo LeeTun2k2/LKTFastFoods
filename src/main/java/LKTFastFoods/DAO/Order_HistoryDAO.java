@@ -16,7 +16,7 @@ public class Order_HistoryDAO extends DBConnection implements iOrder_HistoryDAO{
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, order_History.getClient_id());
+			ps.setString(1, order_History.getClient_id());
 			ps.setInt(2, order_History.getOrder_id());
 			ps.execute();
 		} 
@@ -32,7 +32,7 @@ public class Order_HistoryDAO extends DBConnection implements iOrder_HistoryDAO{
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, order_History.getId());
-			ps.setInt(2, order_History.getClient_id());
+			ps.setString(2, order_History.getClient_id());
 			ps.setInt(3, order_History.getOrder_id());
 			ps.execute();
 		} 
@@ -66,8 +66,10 @@ public class Order_HistoryDAO extends DBConnection implements iOrder_HistoryDAO{
 			while (rs.next()) {
 				Order_History order_History = new Order_History(
 						rs.getInt("ID"),
-						rs.getInt("Client_ID"),
-						rs.getInt("Order_ID")	
+						rs.getString("Client_ID"),
+						rs.getInt("Order_ID"), 
+						rs.getInt("Stars"),
+						rs.getString("Comment")
 				);
 				return order_History;
 			}
@@ -80,7 +82,7 @@ public class Order_HistoryDAO extends DBConnection implements iOrder_HistoryDAO{
 
 	@Override
 	public List<Order_History> GetAll() {
-		String sql = "exec GetAllOrder_History";
+		String sql = "select * from Order_History join Assessments on Order_History.Order_ID=Assessments.Order_ID";
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -89,8 +91,10 @@ public class Order_HistoryDAO extends DBConnection implements iOrder_HistoryDAO{
 			while (rs.next()) {
 				Order_History order_History = new Order_History(
 						rs.getInt("ID"),
-						rs.getInt("Client_ID"),
-						rs.getInt("Order_ID")	
+						rs.getString("Client_ID"),
+						rs.getInt("Order_ID"), 
+						rs.getInt("Stars"),
+						rs.getString("Comment")	
 				);
 				order_Historys.add(order_History);
 			}

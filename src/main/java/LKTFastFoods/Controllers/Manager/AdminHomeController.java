@@ -41,6 +41,21 @@ public class AdminHomeController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// Load dữ liệu lên bảng Tài khoản
+		List<Client> listClient = clientService.GetAll();
+		req.setAttribute("listS", listClient);
+		
+		//Load dữ liệu lên bảng mã giảm giá
+		List<Voucher> listVoucher =voucherService.GetAll();
+		req.setAttribute("listVoucher", listVoucher);
+		
+		//Load dữ liệu lên bảng menu
+		List<Product> listProduct = productService.GetAll();
+		req.setAttribute("listProduct", listProduct);
+		
+		//Load dữ liệu lên bảng đơn hàng
+		List<Order_History> listOrder= order_HistoryService.GetAll();
+		req.setAttribute("listOrder", listOrder);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/views/admin/Home.jsp");
 		dispatcher.forward(req, resp);
 	}

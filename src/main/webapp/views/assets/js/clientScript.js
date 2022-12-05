@@ -17,7 +17,7 @@ function showNotify(type, message){
 
 // header
 var pages = {}
-const quickAccess = document.querySelectorAll(".quick-access div div")
+const quickAccess = document.querySelectorAll(".quick-access div  div")
 var curr = quickAccess[0]
 var currPageName = "menu"
 function setBorder(item) {
