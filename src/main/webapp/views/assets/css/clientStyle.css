@@ -1,0 +1,254 @@
+:root {
+	--primary-color: #ff5b6a;
+	--secondary-color: #ffeae3;
+	--third-color: #fffcfe;
+	background-color: var(--third-color);
+}
+
+.block {display: block;}
+.inline-block {display: inline-block;}
+.hide {display: none !important;}
+.fadeInOut {
+    opacity: 1;
+    animation: fade 5s ease-in-out;
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  25%,75% { opacity: 1 }
+}
+
+.notify {
+	display: block;
+	position: fixed;
+	bottom: 32px;
+	right: 32px;
+	padding: 16px;
+	width: 400px;
+	border: 1px solid;
+	border-radius: 4px;
+	z-index: 9;
+	text-align: center;
+	overflow: hidden;
+	max-height: 90px;
+}
+
+.success {
+	color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.error {
+	color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.warning {
+	color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.button
+{
+    padding: 10px;
+    width: 250px;
+    border: none;
+    color: var(--third-color);
+    cursor: pointer;
+    background: var(--primary-color);
+    font-size: 20px;
+    border-radius: 2px;
+}
+
+
+
+#header {
+	border-color: var(--primary-color) !important;
+}
+
+#header .header {
+	height: 90px;
+}
+
+#header .logo {
+	cursor: pointer;
+}
+
+#header .quick-access div div{
+	font-size: 24px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 50%;
+	opacity: .7;
+	cursor: pointer;
+}
+
+#header .quick-access div div:hover {
+	opacity: .8;
+}
+
+#footer {
+	background-color: var(--secondary-color);
+}
+
+#footer img {
+	width: 120px;
+}
+
+#footer .info li {
+	font-size: 18px;
+	text-decoration: none;
+}
+
+#menu .single-product {
+    margin-bottom: 26px;
+}
+
+#menu .single-product .part-1 {
+    position: relative;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#menu .single-product .part-1 .discount,
+#menu .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #fe302f;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+#menu  .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+#menu  .single-product:hover .part-1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+#menu  .single-product .part-1 ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: var(--secondary-color);
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+}
+
+#menu  .single-product .part-1 ul li:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+#menu  .single-product .part-2 .product-title {
+    font-size: 1rem;
+}
+
+#menu  .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+#menu  .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+#menu  .single-product .part-2 .product-old-price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    transform: translateY(-50%);
+}
+
+#menu .single-product .part-2 .product-price {
+	color: var(--primary-color);
+	font-size: 2rem;
+}
+
+#assessment .rating {
+	width: 250px;
+}
+
+#assessment span.fa.fa-star.checked {
+	color: orange;
+}
+
+#payment label {
+	display: block;
+}
+
+#payment input,
+#assessment input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline-style: none;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+#payment .table-orderInf {
+    text-align: center;
+}
+
+#account input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline-style: none;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+#account .table-orderInf {
+    text-align: center;
+}
+
+#cart ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#cart ul li {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+}
+
+#cart ul li.action {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    transition: color 0.2s;
+    border-radius: 2px;
+}
+
+#cart ul li.action:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
