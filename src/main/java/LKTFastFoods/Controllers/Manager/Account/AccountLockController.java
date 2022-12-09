@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import LKTFastFoods.Models.Client;
-import LKTFastFoods.Models.Voucher;
 import LKTFastFoods.Services.ClientService;
 
 

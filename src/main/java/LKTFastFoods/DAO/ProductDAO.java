@@ -12,11 +12,7 @@ import LKTFastFoods.Models.*;
 public class ProductDAO extends DBConnection implements iProductDAO{
 	@Override
 	public void Add(Product product) {
-<<<<<<< HEAD
-		String sql = "exec AddProduct ? ? ? ? ? ? ?";
-=======
 		String sql = "exec AddProduct ? ,?, ?, ? ,?, ? ,?";
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -36,11 +32,7 @@ public class ProductDAO extends DBConnection implements iProductDAO{
 
 	@Override
 	public void Update(Product product) {
-<<<<<<< HEAD
-		String sql = "exec UpdateProduct ? ? ? ? ? ? ? ?";
-=======
 		String sql = "exec UpdateProduct ?, ?, ?, ? ,?, ? ,? ,?";
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -124,10 +116,6 @@ public class ProductDAO extends DBConnection implements iProductDAO{
 				);
 				products.add(product);
 			}
-<<<<<<< HEAD
-			products.remove(0);
-=======
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 			return products;
 		} 
 		catch (Exception e) {
@@ -135,7 +123,6 @@ public class ProductDAO extends DBConnection implements iProductDAO{
 		}
 		return null;
 	}
-<<<<<<< HEAD
 	
 	public List<Menu> GetAllMenu() {
 		String sql = "exec LoadAllProductInMenu";
@@ -164,6 +151,4 @@ public class ProductDAO extends DBConnection implements iProductDAO{
 		}
 		return null;
 	}
-=======
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 }

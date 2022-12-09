@@ -12,20 +12,12 @@ import LKTFastFoods.Models.*;
 public class AssessmentDAO extends DBConnection implements iAssessmentDAO{
 	@Override
 	public void Add(Assessment assessment) {
-<<<<<<< HEAD
 		String sql = "exec AddAssessment ?, ?, ? ";
-=======
-		String sql = "exec AddAssessment ? ? ?";
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, assessment.getOrder_id());
-<<<<<<< HEAD
 			ps.setInt(2, assessment.getStar());
-=======
-			ps.setFloat(2, assessment.getStar());
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 			ps.setNString(3, assessment.getComment());
 			ps.execute();
 		} 
@@ -36,11 +28,8 @@ public class AssessmentDAO extends DBConnection implements iAssessmentDAO{
 
 	@Override
 	public void Update(Assessment assessment) {
-<<<<<<< HEAD
 		String sql = "exec UpdateAssessment ?, ?, ?, ?";
-=======
-		String sql = "exec UpdateAssessment ? ? ? ?";
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
+
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -81,11 +70,7 @@ public class AssessmentDAO extends DBConnection implements iAssessmentDAO{
 				Assessment assessment = new Assessment(
 						id,
 						rs.getInt("Order_ID"),
-<<<<<<< HEAD
 						rs.getInt("Stars"),
-=======
-						rs.getFloat("Stars"),
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 						rs.getNString("Comment")	
 				);
 				return assessment;
@@ -109,11 +94,7 @@ public class AssessmentDAO extends DBConnection implements iAssessmentDAO{
 				Assessment assessment = new Assessment(
 						rs.getInt("ID"),
 						rs.getInt("Order_ID"),
-<<<<<<< HEAD
 						rs.getInt("Stars"),
-=======
-						rs.getFloat("Stars"),
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 						rs.getNString("Comment")	
 				);
 				assessments.add(assessment);

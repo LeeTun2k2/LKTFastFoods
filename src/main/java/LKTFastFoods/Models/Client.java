@@ -1,11 +1,7 @@
 package LKTFastFoods.Models;
 
-<<<<<<< HEAD
-import java.sql.Date;
-=======
 import java.util.*;
 import java.text.SimpleDateFormat;
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 
 public class Client{
 	public Client(String username, String name, Date birthDate, boolean gender, String phoneNumber, String email,
@@ -19,8 +15,6 @@ public class Client{
 		this.email = email;
 		this.address = address;
 	}
-<<<<<<< HEAD
-=======
 	public Client(String username, String name, Date birthDate, boolean gender, String phoneNumber, String email,
 			String address, boolean active) {
 		super();
@@ -50,7 +44,6 @@ public class Client{
 		this.address = address;
 	}
 	private boolean active;
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 	private String username;
 	private String name;
 	private Date birthDate;
@@ -100,13 +93,10 @@ public class Client{
 	public void setAddress(String address) {
 		this.address = address;
 	}
-<<<<<<< HEAD
-=======
 	public boolean isActive() {
 		return active;
 	}
 	public void setActive(boolean active) {
 		this.active = active;
 	}
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 }

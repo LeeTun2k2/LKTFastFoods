@@ -8,12 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-<<<<<<< HEAD
-=======
-import org.eclipse.jdt.internal.compiler.IDebugRequestor;
-
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 import LKTFastFoods.Models.Account;
 @SuppressWarnings("serial")
 @WebServlet(urlPatterns = "/waitting")
@@ -24,18 +18,6 @@ public class WaittingController extends HttpServlet {
 		if (session!= null && session.getAttribute("account")!=null) {
 			Account a = (Account) session.getAttribute("account");
 			req.setAttribute("username",a.getUsername() );
-<<<<<<< HEAD
-			if (a.isRole()) {
-				resp.sendRedirect(req.getContextPath()+"/admin/Trang-chu");
-				
-			}
-			else {
-				resp.sendRedirect(req.getContextPath()+ "/client/Trang-chu");
-			}
-			
-		}
-		else {
-=======
 			if (a.isRole() &&a.isActive()==true) {
 				resp.sendRedirect(req.getContextPath()+"/admin/Trang-chu");
 				
@@ -50,8 +32,6 @@ public class WaittingController extends HttpServlet {
 			}
 		}
 		else {
-			
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 			resp.sendRedirect(req.getContextPath()+"/Login");
 		}
 	}
@@ -61,7 +41,4 @@ public class WaittingController extends HttpServlet {
 		// TODO Auto-generated method stub
 		super.doPost(req, resp);
 	}
-
-	
-
 }

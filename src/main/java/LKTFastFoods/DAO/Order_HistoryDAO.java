@@ -105,7 +105,6 @@ public class Order_HistoryDAO extends DBConnection implements iOrder_HistoryDAO{
 		}
 		return null;
 	}
-<<<<<<< HEAD
 	
 	public List<PersonalHistory> GetPersonalHistory(String username) {
 		String sql = "exec LoadPersonalHistory ?";
@@ -131,6 +130,4 @@ public class Order_HistoryDAO extends DBConnection implements iOrder_HistoryDAO{
 		}
 		return null;
 	}
-=======
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 }

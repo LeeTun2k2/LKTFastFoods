@@ -11,9 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
 
-/**
- * Servlet implementation class DownloadImageController
- */
+
 @WebServlet("/image")
 public class DownloadImageController extends HttpServlet {
 	private static final long serialVersionUID = 1L;

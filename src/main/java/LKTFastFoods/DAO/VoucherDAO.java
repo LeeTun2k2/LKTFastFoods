@@ -12,21 +12,12 @@ import LKTFastFoods.Models.*;
 public class VoucherDAO extends DBConnection implements iVoucherDAO{
 	@Override
 	public void Add(Voucher voucher) {
-<<<<<<< HEAD
-		String sql = "exec AddVoucher ? ? ? ";
-		try {
-			Connection con = super.getConnection();
-			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setDate(1, voucher.getStartDate());
-			ps.setDate(2, voucher.getEndDate());
-=======
 		String sql = "exec AddVoucher ?, ?, ? ";
 		try { 
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setDate(1, new java.sql.Date(voucher.getStartDate().getTime()));
 			ps.setDate(2, new java.sql.Date(voucher.getEndDate().getTime()));
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 			ps.setInt(3, voucher.getDiscount());
 			ps.execute();
 		} 
@@ -37,22 +28,13 @@ public class VoucherDAO extends DBConnection implements iVoucherDAO{
 
 	@Override
 	public void Update(Voucher voucher) {
-<<<<<<< HEAD
-		String sql = "exec UpdateVoucher ? ? ? ?";
-=======
 		String sql = "exec UpdateVoucher ?, ?, ?, ?";
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, voucher.getId());
-<<<<<<< HEAD
-			ps.setDate(2, voucher.getStartDate());
-			ps.setDate(3, voucher.getEndDate());
-=======
 			ps.setDate(2, new java.sql.Date(voucher.getStartDate().getTime()));
 			ps.setDate(3, new java.sql.Date(voucher.getEndDate().getTime()));
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 			ps.setInt(4, voucher.getDiscount());
 			ps.execute();
 		} 
@@ -76,11 +58,7 @@ public class VoucherDAO extends DBConnection implements iVoucherDAO{
 	}
 
 	@Override
-<<<<<<< HEAD
-	public Voucher GetOne(int id) {
-=======
 	public  Voucher GetOne(int id) {
->>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		String sql = "exec GetOneVoucher ?";
 		try {
 			Connection con = super.getConnection();
