@@ -23,7 +23,7 @@ public class WaittingController extends HttpServlet {
 				
 			}
 			else if(a.isRole()==false&&a.isActive()==true) {
-				resp.sendRedirect(req.getContextPath()+ "/client/Trang-chu");
+				resp.sendRedirect(req.getContextPath()+ "/client/Menu");
 			}
 			else {
 				String alt="Tài khoản đang bị khóa ";

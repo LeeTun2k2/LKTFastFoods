@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import LKTFastFoods.Models.Product;
 import LKTFastFoods.Services.ProductService;
 
-@WebServlet(urlPatterns = {"/" })
+@WebServlet(urlPatterns = {"/MenuDelete" })
 public class MenuDeleteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

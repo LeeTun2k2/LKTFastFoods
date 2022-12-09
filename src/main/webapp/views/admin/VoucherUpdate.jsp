@@ -8,7 +8,7 @@
 <title>LKT Fast Food</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"/>
 			<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,900&amp;display=swap" rel="stylesheet"/>
-				<link rel="stylesheet" href="/LKTFastFood/views/assets/css/adminStyle.css">
+				<link rel="stylesheet" href="${pageContext.request.contextPath}/views/assets/css/adminStyle.css">
 </head>
 <!-- Header -->
 
@@ -21,7 +21,7 @@
 			<div class="inline-block col-5 logo" onclick="location.href='${pageContext.request.contextPath}/views/admin/Trang-chu'">
 				<div class="row">
 					<div>
-						<img class="h-100" src="/LKTFastFood/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo">
+						<img class="h-100" src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo">
 					</div>
 					<div class="col brand ml-4">
 						<h1 class="brand-name font-weight-bold">LKT FAST FOODS</h1>
@@ -66,7 +66,7 @@
 		</div>		
 		<div class="py-4 d-flex justify-content-around">
 			<button formaction="${pageContext.request.contextPath}/Update" id="payment-submit" class="mx-4 button">Lưu lại</button>
-				<button formaction="${pageContext.request.contextPath}/admin/Trang-chu" id="payment-clear" class="mx-4 button">Hủy bỏ</button>
+			<button formaction="${pageContext.request.contextPath}/admin/Trang-chu" id="payment-clear" class="mx-4 button">Hủy bỏ</button>
 		</div>
 
 	</div>

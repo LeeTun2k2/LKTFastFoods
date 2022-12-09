@@ -14,7 +14,7 @@
 	href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,900&display=swap"
 	rel="stylesheet" />
 <link rel="stylesheet"
-	href="/LKTFastFood/views/assets/css/adminStyle.css" />
+	href="${pageContext.request.contextPath}/views/assets/css/adminStyle.css" />
 </head>
 <!-- Header -->
 <header id="header" class="py-4 border-bottom">
@@ -28,7 +28,7 @@
 				<div class="row">
 					<div>
 						<img class="h-100"
-							src="/LKTFastFood/views/assets/img/logo/lotteria_logo.svg"
+							src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg"
 							alt="LKTFastFood logo">
 					</div>
 					<div class="col brand ml-4">

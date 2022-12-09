@@ -58,5 +58,9 @@
 			</div>
 		</div>
 	</div>
+	<!-- Footer -->
+	<%@ include file="/views/common/footer.jsp"%>
+	<script src="${pageContext.request.contextPath}/views/assets/js/clientScript.js"></script>
+	<script src="${pageContext.request.contextPath}/views/assets/js/clientMenuScript.js"></script>
 </body>
 </html>
