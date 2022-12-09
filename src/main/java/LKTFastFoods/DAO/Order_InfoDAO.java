@@ -12,7 +12,11 @@ import LKTFastFoods.Models.*;
 public class Order_InfoDAO extends DBConnection implements iOrder_InfoDAO{
 	@Override
 	public void Add(Order_Info order_Info) {
+<<<<<<< HEAD
 		String sql = "exec AddOrder_Info ?, ?, ?, ?";
+=======
+		String sql = "exec AddOrder_Info ? ? ? ?";
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -29,7 +33,11 @@ public class Order_InfoDAO extends DBConnection implements iOrder_InfoDAO{
 
 	@Override
 	public void Update(Order_Info order_Info) {
+<<<<<<< HEAD
 		String sql = "exec UpdateOrder_Info ?, ?, ?, ?, ?";
+=======
+		String sql = "exec UpdateOrder_Info ? ? ? ? ?";
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);

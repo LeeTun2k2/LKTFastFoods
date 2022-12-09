@@ -114,11 +114,14 @@
     overflow: hidden;
 }
 
+<<<<<<< HEAD
 #menu .single-product img {
 	width: 100%;
 	min-height: 200px;
 }
 
+=======
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 #menu .single-product .part-1 .discount,
 #menu .single-product .part-1 .new {
     position: absolute;
@@ -195,18 +198,24 @@
 	font-size: 2rem;
 }
 
+<<<<<<< HEAD
 #assessment tr {
 	cursor: pointer;
 }
 
+=======
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 #assessment .rating {
 	width: 250px;
 }
 
+<<<<<<< HEAD
 #assessment span.fa.fa-star {
 	cursor: pointer;
 }
 
+=======
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 #assessment span.fa.fa-star.checked {
 	color: orange;
 }

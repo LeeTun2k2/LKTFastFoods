@@ -32,4 +32,16 @@ public class ClientService implements iClientService {
 	public List<Client> GetAll() {
 		return clientDAO.GetAll();
 	}
+	
+	@Override
+	public void lockAccount(String username) {
+		 clientDAO.lockAccount(username);
+		
+	}
+	@Override
+	public void unLockAccount(String username) {
+		 clientDAO.unLockAccount(username);
+		
+	}
+
 }

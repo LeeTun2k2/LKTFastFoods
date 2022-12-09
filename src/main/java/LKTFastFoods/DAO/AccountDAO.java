@@ -12,7 +12,11 @@ import LKTFastFoods.Models.*;
 public class AccountDAO extends DBConnection implements iAccountDAO{
 	@Override
 	public void Add(Account account) {
+<<<<<<< HEAD
 		String sql = "exec AddAccount ? ? ? ?";
+=======
+		String sql = "exec AddAccount ?, ?, ?, ?";
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -29,7 +33,11 @@ public class AccountDAO extends DBConnection implements iAccountDAO{
 
 	@Override
 	public void Update(Account account) {
+<<<<<<< HEAD
 		String sql = "exec UpdateAccount ? ? ? ?";
+=======
+		String sql = "exec UpdateAccount ?, ? ,?, ?";
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);

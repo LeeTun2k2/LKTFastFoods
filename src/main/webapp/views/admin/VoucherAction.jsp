@@ -5,8 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LKT Fast Food</title>
+<<<<<<< HEAD
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
 			<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,900&amp;display=swap" rel="stylesheet">
+=======
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"/>
+			<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,900&amp;display=swap" rel="stylesheet"/>
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 				<link rel="stylesheet" href="/LKTFastFood/views/assets/css/adminStyle.css">
 </head>
 <!-- Header -->
@@ -14,9 +19,16 @@
 
 <body><header id="header" class="py-4 border-bottom">
 <!-- Header -->
+<<<<<<< HEAD
 	<div class="container header">
 		<div class="row">
 			<div class="inline-block col-5 logo" onclick="location.href='/LKTFastFood/views/client/Home.jsp';">
+=======
+
+	<div class="container header">
+		<div class="row">
+			<div class="inline-block col-5 logo" onclick="location.href='${pageContext.request.contextPath}/views/admin/Trang-chu'">
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 				<div class="row">
 					<div>
 						<img class="h-100" src="/LKTFastFood/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo">
@@ -29,6 +41,7 @@
 			</div>
 			<div class="col inline-block d-flex justify-content-end align-items-center quick-access">
 				<ul class="navbar">
+<<<<<<< HEAD
 					<li class="item"><h6>Tài khoản</h6></li>
 					<li class="item"><h6>Đơn hàng</h6></li>
 					<li class="item"><h6>Menu</h6></li>
@@ -39,14 +52,31 @@
 	</div>
 </header>
 
+=======
+					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li class="item"><h6>Tài khoản </h6></li></a>
+					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li class="item"><h6>Đánh giá </h6></li></a>
+					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li class="item"><h6>Menu </h6></li></a>
+					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li class="item"><h6>Voucher</h6></li></a>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+	
+</header>
+<form  method="post">
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 <div id="menu-action" class="my-4">
 	<div class="container py-4">
 		<h2 class="py-4 text-center">SẢN PHẨM</h2>
 		<div class="my-4 row">
 			<div class="my-2 row col">
+<<<<<<< HEAD
 				<label class="col text-right" for="id">Mã giảm giá: </label> <input class="col name text-center input" name="id" placeholder="Mã giảm giá">
 			</div>
 			<div class="my-2 row col">
+=======
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 				<label class="col text-right" for="value">Giá trị:</label> <input class="col phone text-center input" name="value" placeholder="Giá trị %">
 			</div>
 			<div class="col-2"></div>
@@ -62,14 +92,23 @@
 			<div class="col-2"></div>
 		</div>
 		<div class="py-4 d-flex justify-content-around">
+<<<<<<< HEAD
 			<button id="payment-submit" class="mx-4 button">Lưu lại</button>
 			<button id="payment-clear" class="mx-4 button">Hủy bỏ</button>
+=======
+			<button formaction="${pageContext.request.contextPath}/add" id="payment-submit" class="mx-4 button">Lưu lại</button>
+			<button formaction="${pageContext.request.contextPath}/admin/Trang-chu" class="mx-4 button">Hủy bỏ</button>
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		</div>
 	</div>
 
 </div>
 
+<<<<<<< HEAD
 
+=======
+</form>
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 
 <!-- Footer -->
 
@@ -78,7 +117,11 @@
 		<div class="row">
 			<div class="d-flex justify-content-center col logo">
 				<div>
+<<<<<<< HEAD
 					<div class="img d-flex justify-content-center">
+=======
+					<div class="img d-flex justify-content-center" onclick="location.href='${pageContext.request.contextPath}/views/admin/Trang-chu';">
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 						<img src="/LKTFastFood/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo">
 					</div>
 					<div class="py-4 description">
@@ -104,5 +147,9 @@
 	</div>
 </footer>
 
+<<<<<<< HEAD
 
+=======
+	<script src="${pageContext.request.contextPath}/views/assets/js/adminScript.js"></script>
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 </body></html>

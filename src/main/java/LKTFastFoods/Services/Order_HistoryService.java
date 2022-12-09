@@ -17,7 +17,7 @@ public class Order_HistoryService implements iOrder_HistoryService {
 	public void Update(Order_History order_History) {		
 		order_HistoryDAO.Update(order_History);
 	}
-
+	
 	@Override
 	public void Delete(int id) {
 		order_HistoryDAO.Delete(id);

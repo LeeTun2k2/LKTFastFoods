@@ -1,7 +1,11 @@
 package LKTFastFoods.Models;
 
 public class Order_History{
+<<<<<<< HEAD
 	public Order_History(int id, String client_id, int order_id, int star, String comment) {
+=======
+	public Order_History(int id, String client_id, int order_id, int star,String comment ) {
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		super();
 		this.id = id;
 		this.client_id = client_id;
@@ -9,7 +13,10 @@ public class Order_History{
 		this.star=star;
 		this.comment=comment;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 	private int id;
 	private String client_id;
 	private int order_id;
@@ -45,4 +52,8 @@ public class Order_History{
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b

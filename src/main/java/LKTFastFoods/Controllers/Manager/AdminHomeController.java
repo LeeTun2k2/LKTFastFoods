@@ -1,12 +1,18 @@
 package LKTFastFoods.Controllers.Manager;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+<<<<<<< HEAD
 import javax.servlet.annotation.MultipartConfig;
+=======
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,8 +28,11 @@ import LKTFastFoods.Services.*;
 import LKTFastFoods.Util.*;
 
 @WebServlet(urlPatterns = {"/admin/Trang-chu"})
+<<<<<<< HEAD
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 5 * 5)
 
+=======
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 public class AdminHomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	AccountService accountService = new AccountService();
@@ -62,6 +71,26 @@ public class AdminHomeController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+<<<<<<< HEAD
 		
+=======
+		// Load dữ liệu lên bảng Tài khoản
+				List<Client> listClient = clientService.GetAll();
+				req.setAttribute("listS", listClient);
+				
+				//Load dữ liệu lên bảng mã giảm giá
+				List<Voucher> listVoucher =voucherService.GetAll();
+				req.setAttribute("listVoucher", listVoucher);
+				
+				//Load dữ liệu lên bảng menu
+				List<Product> listProduct = productService.GetAll();
+				req.setAttribute("listProduct", listProduct);
+				
+				//Load dữ liệu lên bảng đơn hàng
+				List<Order_History> listOrder= order_HistoryService.GetAll();
+				req.setAttribute("listOrder", listOrder);			
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/views/admin/Home.jsp");
+		dispatcher.forward(req, resp);
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 	}
 }

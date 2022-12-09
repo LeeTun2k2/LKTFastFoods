@@ -1,5 +1,11 @@
 package LKTFastFoods.Models;
 
+<<<<<<< HEAD
+=======
+import java.awt.Image;
+import java.awt.ImageCapabilities;
+
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 public class Product{
 	public Product(int id, String name, String image, String description, int amount, boolean status, int importPrice,
 			int exportPrice, int voucher_id) {
@@ -14,6 +20,21 @@ public class Product{
 		this.exportPrice = exportPrice;
 		this.voucher_id = voucher_id;
 	}
+<<<<<<< HEAD
+=======
+	public Product () {};
+	public Product(int id , String name,String image, String description,  int importPrice,
+			int exportPrice, int voucher_id){
+			
+				this.id = id;
+				this.name = name;
+				this.description = description;
+				this.image=image;
+				this.importPrice = importPrice;
+				this.exportPrice = exportPrice;
+				this.voucher_id = voucher_id;
+			}
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 	private int id;
 	private String name;
 	private String image;

@@ -1,6 +1,11 @@
 package LKTFastFoods.Models;
 
+<<<<<<< HEAD
 import java.sql.Date;
+=======
+import java.util.*;
+import java.text.SimpleDateFormat;
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 
 public class Client{
 	public Client(String username, String name, Date birthDate, boolean gender, String phoneNumber, String email,
@@ -14,6 +19,38 @@ public class Client{
 		this.email = email;
 		this.address = address;
 	}
+<<<<<<< HEAD
+=======
+	public Client(String username, String name, Date birthDate, boolean gender, String phoneNumber, String email,
+			String address, boolean active) {
+		super();
+		this.username = username;
+		this.name = name;
+		this.birthDate = birthDate;
+		this.gender = gender;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+		this.address = address;
+		this.setActive(active);
+	}
+	public Client(String username, String name, String birthDate, boolean gender, String phoneNumber, String email,
+			String address) {
+		super();
+		this.username = username;
+		this.name = name;
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			this.birthDate= sdf.parse(birthDate);
+		} catch (Exception e) {
+			e.getStackTrace();
+		}
+		this.gender = gender;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+		this.address = address;
+	}
+	private boolean active;
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 	private String username;
 	private String name;
 	private Date birthDate;
@@ -63,4 +100,13 @@ public class Client{
 	public void setAddress(String address) {
 		this.address = address;
 	}
+<<<<<<< HEAD
+=======
+	public boolean isActive() {
+		return active;
+	}
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 }

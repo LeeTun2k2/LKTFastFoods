@@ -5,8 +5,13 @@
 		<div class="row">
 			<div class="d-flex justify-content-center col logo">
 				<div>
+<<<<<<< HEAD
 					<div class="img d-flex justify-content-center">
 						<img src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
+=======
+					<div class="img d-flex justify-content-center" onclick="location.href='${pageContext.request.contextPath}/views/admin/Trang-chu';">
+						<img style='cursor:pointer;' src="/LKTFastFood/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 					</div>
 					<div class="py-4 description">
 						<h5>SUBSCRIBE FOR PROMOTIONAL UPDATES</h5>

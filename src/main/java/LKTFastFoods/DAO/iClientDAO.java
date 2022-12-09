@@ -13,4 +13,9 @@ public interface iClientDAO {
 	Client GetOne(String username);
 
 	List<Client> GetAll();
+<<<<<<< HEAD
+=======
+	void lockAccount(String username);
+	void unLockAccount(String username);
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 }

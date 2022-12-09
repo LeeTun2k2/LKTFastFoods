@@ -11,6 +11,10 @@ public interface iClientService {
 	void Delete(String username);
 
 	Client GetOne(String username);
+	
+	void lockAccount(String username);
+	
+	void unLockAccount(String username);
 
 	List<Client> GetAll();
 }

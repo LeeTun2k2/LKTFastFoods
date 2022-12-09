@@ -11,13 +11,13 @@ import LKTFastFoods.Models.*;
 public class ClientDAO extends DBConnection implements iClientDAO{
 	@Override
 	public void Add(Client client) {
-		String sql = "exec AddClient ? ? ? ? ? ? ?";
+		String sql = "exec AddClient ?, ?, ?, ? ,? ,?, ?";
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, client.getUsername());
 			ps.setNString(2, client.getName());
-			ps.setDate(3, client.getBirthDate());
+			ps.setDate(3, new java.sql.Date(client.getBirthDate().getTime()));
 			ps.setBoolean(4, client.isGender());
 			ps.setString(5, client.getPhoneNumber());
 			ps.setString(6, client.getEmail());
@@ -31,13 +31,13 @@ public class ClientDAO extends DBConnection implements iClientDAO{
 
 	@Override
 	public void Update(Client client) {
-		String sql = "exec UpdateClient ? ? ? ? ? ? ? ";
+		String sql = "exec UpdateClient ?, ? ,?, ?, ?, ? ,? ";
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, client.getUsername());
 			ps.setNString(2, client.getName());
-			ps.setDate(3, client.getBirthDate());
+			ps.setDate(3, new java.sql.Date(client.getBirthDate().getTime()));
 			ps.setBoolean(4, client.isGender());
 			ps.setString(5, client.getPhoneNumber());
 			ps.setString(6, client.getEmail());
@@ -92,7 +92,7 @@ public class ClientDAO extends DBConnection implements iClientDAO{
 
 	@Override
 	public List<Client> GetAll() {
-		String sql = "exec GetAllClients";
+		String sql = "select * from Clients join Accounts on Clients.Username= Accounts.Username";
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -106,7 +106,8 @@ public class ClientDAO extends DBConnection implements iClientDAO{
 						rs.getBoolean("Gender"),
 						rs.getString("PhoneNumber"),
 						rs.getString("Email"),
-						rs.getNString("Address")
+						rs.getNString("Address"),
+						rs.getBoolean("Active")
 				);
 				Clients.add(client);
 			}
@@ -116,5 +117,32 @@ public class ClientDAO extends DBConnection implements iClientDAO{
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	@Override
+	public void lockAccount(String username) {
+		String sql = "UPDATE Accounts SET Active=0 WHERE Accounts.Username= ?";
+		try {
+			Connection con = super.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, username);
+			ps.execute();
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	@Override
+	public void unLockAccount(String username) {
+		String sql = "UPDATE Accounts SET Active=1 WHERE Accounts.Username= ?";
+		try {
+			Connection con = super.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, username);
+			ps.execute();
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

@@ -12,7 +12,11 @@ import LKTFastFoods.Models.*;
 public class Payment_MethodDAO extends DBConnection implements iPayment_MethodDAO{
 	@Override
 	public void Add(Payment_Method payment_Method) {
+<<<<<<< HEAD
 		String sql = "exec AddPayment_Method ?, ?, ?";
+=======
+		String sql = "exec AddPayment_Method ? ? ?";
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -28,7 +32,11 @@ public class Payment_MethodDAO extends DBConnection implements iPayment_MethodDA
 
 	@Override
 	public void Update(Payment_Method payment_Method) {
+<<<<<<< HEAD
 		String sql = "exec UpdatePayment_Method ?, ?, ?, ?";
+=======
+		String sql = "exec UpdatePayment_Method ? ? ? ?";
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -105,6 +113,7 @@ public class Payment_MethodDAO extends DBConnection implements iPayment_MethodDA
 		}
 		return null;
 	}
+<<<<<<< HEAD
 	
 	public int GetMaxPaymentMethodID() {
 		String sql = "exec GetMaxPaymentMethodID";
@@ -122,4 +131,6 @@ public class Payment_MethodDAO extends DBConnection implements iPayment_MethodDA
 		}
 		return 0;
 	}
+=======
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 }

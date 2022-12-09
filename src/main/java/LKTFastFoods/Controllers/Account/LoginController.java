@@ -21,10 +21,17 @@ public class LoginController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession(false );
+<<<<<<< HEAD
 		if(session != null && session.getAttribute("account")!=null) {
 			resp.sendRedirect(req.getContextPath()+"/waiting");
 			return;
 		}
+=======
+//		if(session != null && session.getAttribute("account")!=null) {
+//			resp.sendRedirect(req.getContextPath()+"/waitting");
+//			return;
+//		}
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 		//check cookie 
 		Cookie[] cookies = req.getCookies();
 		if (cookies != null ) {

@@ -5,6 +5,7 @@
 	<div class="container py-4">
 		<h2 class="text-center">QUẢN LÝ ĐÁNH GIÁ</h2>
 		<div class="content py-4">
+<<<<<<< HEAD
 			<div class="row search col-6 py-2">
 				<button id="order-search" type="button" class="s-button col-3">Tìm kiếm</button>
 				<input class="ml-4 input col" type="text"
@@ -13,6 +14,13 @@
 			<table class="table table-striped my-4">
 				<thead>
 					<tr>
+=======
+			
+			<table class="table table-striped my-4">
+				<thead>
+					<tr>
+					
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 						<th scope="col">Tên đăng nhập</th>
 						<th scope="col">Mã đơn hàng</th>
 						
@@ -23,6 +31,10 @@
 			<c:forEach items="${listOrder}" var="x">
 				<tbody>
 				<tr>
+<<<<<<< HEAD
+=======
+				
+>>>>>>> 1877eec9609203ec346f68b8e14f2420cdf01c4b
 				    <td> ${x.getClient_id()}</td>
 				    <td> ${x.getOrder_id()}</td>
 				  
