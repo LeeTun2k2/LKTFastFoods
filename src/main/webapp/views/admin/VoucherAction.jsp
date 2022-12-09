@@ -36,21 +36,7 @@
 								trên từng sản phẩm</h6>
 						</div>
 					</div>
-				</div>
-				<div
-					class="col inline-block d-flex justify-content-end align-items-center quick-access">
-					<ul class="navbar">
-						<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li
-							class="item"><h6>Tài khoản</h6></li></a>
-						<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li
-							class="item"><h6>Đánh giá</h6></li></a>
-						<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li
-							class="item"><h6>Menu</h6></li></a>
-						<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li
-							class="item"><h6>Voucher</h6></li></a>
-					</ul>
-
-				</div>
+				</div>	
 			</div>
 		</div>
 
@@ -100,7 +86,7 @@
 					<div>
 						<div class="img d-flex justify-content-center"
 							onclick="location.href='${pageContext.request.contextPath}/views/admin/Trang-chu';">
-							<img src="/LKTFastFood/views/assets/img/logo/lotteria_logo.svg"
+							<img src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg"
 								alt="LKTFastFood logo">
 						</div>
 						<div class="py-4 description">
@@ -116,10 +102,10 @@
 					<div>
 						<h3>DANH SÁCH THÀNH VIÊN</h3>
 						<ul>
-							<li>20110xxx - Trần Quang Khánh.</li>
-							<li>20110xxx - Nguyễn Văn Lâm.</li>
-							<li>20110xxx - Lê Quang Tùng.</li>
-							<li>20110xxx - Lê Minh Tường.</li>
+							<li>20110660 - Trần Quang Khánh</li>
+						<li>20110668 - Nguyễn Văn Lâm</li>
+						<li>20110746 - Lê Quang Tùng</li>
+						<li>20110280 - Lê Minh Tường</li>
 						</ul>
 					</div>
 				</div>
