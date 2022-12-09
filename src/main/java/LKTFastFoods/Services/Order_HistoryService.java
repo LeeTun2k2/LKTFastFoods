@@ -9,13 +9,13 @@ public class Order_HistoryService implements iOrder_HistoryService {
 	private Order_HistoryDAO order_HistoryDAO = new Order_HistoryDAO();
 
 	@Override
-	public void Add(Order_History Order_History) {
-		order_HistoryDAO.Add(Order_History);
+	public void Add(Order_History order_History) {
+		order_HistoryDAO.Add(order_History);
 	}
 
 	@Override
-	public void Update(Order_History Order_History) {		
-		order_HistoryDAO.Update(Order_History);
+	public void Update(Order_History order_History) {		
+		order_HistoryDAO.Update(order_History);
 	}
 
 	@Override
@@ -31,5 +31,10 @@ public class Order_HistoryService implements iOrder_HistoryService {
 	@Override
 	public List<Order_History> GetAll() {
 		return order_HistoryDAO.GetAll();
+	}
+	
+	public List<PersonalHistory> GetPersonalHistory(String username)
+	{
+		return order_HistoryDAO.GetPersonalHistory(username);
 	}
 }

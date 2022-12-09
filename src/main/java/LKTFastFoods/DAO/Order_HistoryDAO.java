@@ -105,4 +105,29 @@ public class Order_HistoryDAO extends DBConnection implements iOrder_HistoryDAO{
 		}
 		return null;
 	}
+	
+	public List<PersonalHistory> GetPersonalHistory(String username) {
+		String sql = "exec LoadPersonalHistory ?";
+		try {
+			Connection con = super.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, username);
+			ResultSet rs = ps.executeQuery();
+			List<PersonalHistory> personalHistorys = new ArrayList<PersonalHistory>();
+			while (rs.next()) {
+				PersonalHistory personalHistory = new PersonalHistory(
+						rs.getInt("Order_ID"),
+						rs.getString("Name"),
+						rs.getInt("Quantity"), 
+						rs.getInt("Amount")
+				);
+				personalHistorys.add(personalHistory);
+			}
+			return personalHistorys;
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

@@ -1,4 +1,4 @@
-use LKTFastFood
+use LKTFastFoods
 go
 
 -- Accounts
@@ -64,10 +64,6 @@ go
 create procedure DeleteClient @username varchar(40)
 as
 begin transaction
-	update Order_History
-	set Client_ID = 'null'
-	where Order_History.Client_ID = @username
-
 	delete from Clients
 	where Username = @username
 commit
@@ -154,14 +150,8 @@ go
 
 create procedure DeleteVoucher @id int
 as
-begin transaction
-	update Products
-	set Voucher_ID = 0
-	where Products.Voucher_ID = @id
-
 	delete from Vouchers
 	where ID = @id
-commit
 go
 
 create procedure GetAllVouchers 
@@ -180,7 +170,7 @@ go
 -- Products
 create procedure AddProduct 
 	@name nvarchar(40),
-	@image image,
+	@image varchar(200),
 	@description nvarchar(40),
 	@status bit,
 	@importPrice int,
@@ -193,7 +183,7 @@ go
 create procedure UpdateProduct 
 	@ID int,
 	@name nvarchar(40),
-	@image image,
+	@image varchar(200),
 	@description nvarchar(40),
 	@status bit,
 	@importPrice int,
@@ -214,14 +204,6 @@ go
 create procedure DeleteProduct @id int
 as
 begin transaction
-	update Menu
-	set Product_ID = 0
-	where Menu.Product_ID = @id
-
-	update Order_Info
-	set Product_ID = 0
-	where Order_Info.Product_ID = @id
-
 	delete from Products
 	where ID = @id
 commit
@@ -299,10 +281,6 @@ go
 create procedure DeletePayment_Method @id int
 as
 begin transaction
-	update Payments
-	set Method_ID = 0
-	where Payments.Method_ID = @id
-
 	delete from Payment_Methods
 	where ID = @id
 commit
@@ -340,10 +318,6 @@ go
 create procedure DeletePayment @id int
 as 
 begin transaction
-	update Orders
-	set Payment_ID = 0
-	where Orders.Payment_ID =@id
-
 	delete from Payments
 	where ID = @id
 commit
@@ -379,18 +353,6 @@ go
 create procedure DeleteOrder @id int
 as
 begin transaction
-	update Order_Info
-	set Order_ID = 0
-	where Order_ID = @id
-
-	update Order_History
-	set Order_ID = 0
-	where Order_ID = @id
-
-	update Assessments
-	set Order_ID = 0
-	where Order_ID = @id
-
 	delete from Orders
 	where ID = @id
 commit

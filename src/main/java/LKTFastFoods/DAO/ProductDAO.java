@@ -116,7 +116,36 @@ public class ProductDAO extends DBConnection implements iProductDAO{
 				);
 				products.add(product);
 			}
+			products.remove(0);
 			return products;
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public List<Menu> GetAllMenu() {
+		String sql = "exec LoadAllProductInMenu";
+		try {
+			Connection con = super.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			List<Menu> menus = new ArrayList<Menu>();
+			while (rs.next()) {
+				Menu menu = new Menu(
+						rs.getInt("ID"),
+						rs.getNString("Name"),
+						rs.getString("Image"),
+						rs.getNString("Description"),
+						rs.getInt("Amount"),
+						rs.getInt("Export_Price"),
+						rs.getInt("Discount")
+				);
+				menus.add(menu);
+			}
+			menus.remove(0);
+			return menus;
 		} 
 		catch (Exception e) {
 			e.printStackTrace();

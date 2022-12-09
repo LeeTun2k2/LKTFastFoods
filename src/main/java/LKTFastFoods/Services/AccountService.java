@@ -22,7 +22,7 @@ public class AccountService implements iAccountService {
 	public void Delete(String username) {
 		accountDAO.Delete(username);
 	}
-
+	
 	@Override
 	public Account GetOne(String username) {
 		return accountDAO.GetOne(username);

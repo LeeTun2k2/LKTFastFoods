@@ -1,7 +1,7 @@
 package LKTFastFoods.Models;
 
 public class Order_History{
-	public Order_History(int id, String client_id, int order_id, int star,String comment ) {
+	public Order_History(int id, String client_id, int order_id, int star, String comment) {
 		super();
 		this.id = id;
 		this.client_id = client_id;
@@ -9,6 +9,7 @@ public class Order_History{
 		this.star=star;
 		this.comment=comment;
 	}
+
 	private int id;
 	private String client_id;
 	private int order_id;

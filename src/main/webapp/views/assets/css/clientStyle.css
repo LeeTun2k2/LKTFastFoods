@@ -114,6 +114,11 @@
     overflow: hidden;
 }
 
+#menu .single-product img {
+	width: 100%;
+	min-height: 200px;
+}
+
 #menu .single-product .part-1 .discount,
 #menu .single-product .part-1 .new {
     position: absolute;
@@ -188,6 +193,10 @@
 #menu .single-product .part-2 .product-price {
 	color: var(--primary-color);
 	font-size: 2rem;
+}
+
+#assessment tr {
+	cursor: pointer;
 }
 
 #assessment .rating {

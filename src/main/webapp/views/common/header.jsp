@@ -5,7 +5,7 @@
 <!-- Header -->
 	<div class="container header">
 		<div class="row">
-			<div class="inline-block col-5 logo" onclick="location.href='${pageContext.request.contextPath}/views/client/Home.jsp';">
+			<div class="inline-block col-5 logo" onclick="window.location = 'Menu';">
 				<div class="row">
 					<div>
 						<img class="h-100" src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
@@ -16,36 +16,13 @@
 					</div>
 				</div>
 			</div>
-	      
-	      	<c:choose>
-					<c:when test="${sessionScope.account== null }">
-						<div class=" col-sm-6 ">
-							<ul class=" list-inline right-topbar pull-right ">
-								<li><a href="${pageContext.request.contextPath}/Login"> Đăng
-										nhập</a> <a href="${pageContext.request.contextPath}/Register">
-										Đăng ký</a></li>
-
-							</ul>
-						</div>
-					</c:when>
-					<c:otherwise>
-						<div class="col-sm-6 ">
-							<ul class="list-inline right-topbar pull-right">
-								<li>
-									<a href="${pageContext.request.contextPath}/Logout">Đăng xuất</a>
-								</li>
-
-							</ul>
-						</div>
-					</c:otherwise>
-				</c:choose>
 			<div class="col inline-block d-flex justify-content-end align-items-center quick-access">
 				<div>
-				    <div class="menu border click inline-block mx-2"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
-					<div class="history inline-block mx-2"><i class="fa fa-history" aria-hidden="true"></i></div>
-					<div class="assessment inline-block mx-2"><i class="fa fa-star-o" aria-hidden="true"></i></div>
-					<div class="cart inline-block mx-2"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
-					<div class="account inline-block mx-2 "><i class="fa fa-user-o" aria-hidden="true"></i></div>
+				    <div id="header-menu" class="inline-block mx-2"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
+					<div id="header-history" class="inline-block mx-2"><i class="fa fa-history" aria-hidden="true"></i></div>
+					<div id="header-assessment" class="assessment inline-block mx-2"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+					<div id="header-cart" class="inline-block mx-2"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
+					<div id="header-account" class="inline-block mx-2 "><i class="fa fa-user-o" aria-hidden="true"></i></div>
 				</div>
 			</div>
 			

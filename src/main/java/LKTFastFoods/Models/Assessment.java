@@ -1,7 +1,7 @@
 package LKTFastFoods.Models;
 
 public class Assessment{
-	public Assessment(int id, int order_id, float star, String comment) {
+	public Assessment(int id, int order_id, int star, String comment) {
 		super();
 		this.id = id;
 		this.order_id = order_id;
@@ -11,7 +11,7 @@ public class Assessment{
 	
 	private int id;
 	private int order_id;
-	private float star;
+	private int star;
 	private String comment;
 	public int getId() {
 		return id;
@@ -25,10 +25,10 @@ public class Assessment{
 	public void setOrder_id(int order_id) {
 		this.order_id = order_id;
 	}
-	public float getStar() {
+	public int getStar() {
 		return star;
 	}
-	public void setStar(float star) {
+	public void setStar(int star) {
 		this.star = star;
 	}
 	public String getComment() {

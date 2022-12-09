@@ -1,6 +1,6 @@
-create database LKTFastFood
+create database LKTFastFoods
 go
-use LKTFastFood
+use LKTFastFoods
 go
 
 -- Accounts
@@ -14,25 +14,25 @@ go
 
 -- Clients
 create table Clients(
-	Username varchar(40) primary key references Accounts(Username),
+	Username varchar(40) primary key references Accounts(Username) on delete cascade,
 	Name nvarchar(40) not null,
-	BirthDate date,
+	BirthDate date not null,
 	Gender bit not null,
-	PhoneNumber varchar(11),
-	Email varchar(40),
-	Address nvarchar(100)
+	PhoneNumber varchar(11) not null,
+	Email varchar(40) not null,
+	Address nvarchar(100) not null
 )
 go
 
 -- Managers
 create table Managers(
-	Username varchar(40) primary key references Accounts(Username),
+	Username varchar(40) primary key references Accounts(Username) on delete cascade,
 	Name nvarchar(40) not null,
-	BirthDate date,
+	BirthDate date not null,
 	Gender bit not null,
-	PhoneNumber varchar(11),
-	Email varchar(40),
-	Address nvarchar(100)
+	PhoneNumber varchar(11) not null,
+	Email varchar(40) not null,
+	Address nvarchar(100) not null
 )
 go
 
@@ -49,13 +49,13 @@ go
 create table Products(
 	ID int identity(0,1) primary key,
 	Name nvarchar(40) not null,
-	Image image,
-	Description nvarchar(100),
+	Image varchar(200) not null,
+	Description nvarchar(100) not null,
 	Amount int not null,
 	Status bit not null,
 	Import_Price int not null,
 	Export_Price int not null,
-	Voucher_ID int references Vouchers(ID)
+	Voucher_ID int references Vouchers(ID) on delete cascade
 )
 go
 
@@ -71,17 +71,17 @@ go
 -- Payments
 create table Payments(
 	ID int identity(0,1) primary key,
-	Method_ID int references Payment_Methods(ID),
+	Method_ID int references Payment_Methods(ID) on delete cascade,
 	DateDone date not null,
 	Amount int not null,
-	Description nvarchar(100)
+	Description nvarchar(100) not null
 )
 go
 
 -- Orders
 create table Orders(
 	ID int identity(0,1) primary key,
-	Payment_ID int references Payments(ID),
+	Payment_ID int references Payments(ID) on delete cascade,
 	Amount int not null,
 	Date date not null
 )
@@ -94,17 +94,18 @@ create table Order_Info (
 	Order_ID int,
 	Quantity int not null,
 	Amount int not null,
-	foreign key(Product_ID) references Products(ID),
-	foreign key(Order_ID) references Orders(ID)
+	foreign key(Product_ID) references Products(ID) on delete cascade,
+	foreign key(Order_ID) references Orders(ID) on delete cascade,
+	unique(Product_ID, Order_ID)
 )
 go
 
 -- Assessments
 create table Assessments (
 	ID int identity(0,1) primary key,
-	Order_ID int references Orders(ID),
+	Order_ID int not null unique references Orders(ID) on delete cascade,
 	Stars float not null,
-	Comment nvarchar(200)
+	Comment nvarchar(200) not null
 )
 go 
 
@@ -113,7 +114,8 @@ create table Order_History (
 	ID int identity(0,1) primary key,
 	Client_ID varchar(40),
 	Order_ID int,
-	foreign key(Client_ID) references Clients(Username),
-	foreign key(Order_ID) references Orders(ID)
+	foreign key(Client_ID) references Clients(Username) on delete cascade,
+	foreign key(Order_ID) references Orders(ID) on delete cascade,
+	unique(Client_ID, Order_ID)
 )
 go

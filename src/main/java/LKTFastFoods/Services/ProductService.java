@@ -32,4 +32,8 @@ public class ProductService implements iProductService {
 	public List<Product> GetAll() {
 		return productDAO.GetAll();
 	}
+	
+	public List<Menu> GetAllMenu() {
+		return productDAO.GetAllMenu();
+	}
 }

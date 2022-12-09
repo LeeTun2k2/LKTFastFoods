@@ -32,4 +32,8 @@ public class Payment_MethodService implements iPayment_MethodService {
 	public List<Payment_Method> GetAll() {
 		return payment_MethodDAO.GetAll();
 	}
+	
+	public int GetMaxPaymentMethodID() {
+		return payment_MethodDAO.GetMaxPaymentMethodID();
+	}
 }

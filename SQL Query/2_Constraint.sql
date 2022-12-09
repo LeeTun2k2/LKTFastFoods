@@ -1,4 +1,4 @@
-﻿use LKTFastFood
+﻿use LKTFastFoods
 go
 
 alter table Accounts

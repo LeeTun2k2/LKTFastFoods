@@ -15,70 +15,31 @@ function showNotify(type, message){
 	}
 }
 
-// header
-var pages = {}
-const quickAccess = document.querySelectorAll(".quick-access div  div")
-var curr = quickAccess[0]
-var currPageName = "menu"
-function setBorder(item) {
-	let name = item.classList[0]
-	pages[name] = document.getElementById(name)
-	item.onclick = function() {
-		curr.classList.remove("border")
-		curr = item
-		curr.classList.add("border")
-		pages[currPageName].classList.add("hide")
-		currPageName = name
-		pages[name].classList.remove("hide")
-	}
-}
-quickAccess.forEach(setBorder)
 
-// menu
-const menuAddProducts = document.querySelectorAll("#menu  .single-product .part-1 ul li")
-menuAddProducts.forEach((item)=>{
-	item.onclick=()=>{
-		
-	}
-})
-
-
-// assessment
-const ratingStars = document.querySelectorAll("#assessment .star span")
-function rating(star) {
-	star.onclick = () => {
-		let id = parseInt(star.id[5])
-		for (let i = 0; i < 5; i++)
-			ratingStars[i].classList.remove("checked")
-		for (let i = 0; i < id; i++)
-			ratingStars[i].classList.add("checked")
-	}
-}
-ratingStars.forEach(rating)
-
-
-// button assessment-submit
-const assessmentSubmit = document.getElementById("assessment-submit")
-assessmentSubmit.onclick=()=>{
-	showNotify("success", "Đánh giá thành công.")
+// navigation bar
+const headerMenu = document.getElementById("header-menu")
+headerMenu.onclick = () => {
+	 window.location = "Menu";
 }
 
-// accounts
-// button rollback
-const accountRollback = document.getElementById("account-rollback")
-accountRollback.onclick=()=>{
-	showNotify("warning", "Không có thông tin nào thay đỏi.")
+const headerHistory = document.getElementById("header-history")
+headerHistory.onclick = () => {
+	 window.location = "Order-History";
 }
 
-// button submit
-const accountSubmit = document.getElementById("account-submit")
-accountSubmit.onclick=()=>{
-	showNotify("success", "Cập nhật thông tin thành công.")
+const headerAssessment = document.getElementById("header-assessment")
+headerAssessment.onclick = () => {
+	 window.location = "Assessment";
 }
 
+const headerCart = document.getElementById("header-cart")
+headerCart.onclick = () => {
+	 window.location = "Cart";
+}
 
-
-
-
+const headerAccount = document.getElementById("header-account")
+headerAccount.onclick = () => {
+	 window.location = "Account";
+}
 
 

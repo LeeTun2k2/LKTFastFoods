@@ -32,4 +32,8 @@ public class PaymentService implements iPaymentService {
 	public List<Payment> GetAll() {
 		return paymentDAO.GetAll();
 	}
+	
+	public int GetMaxPaymentID() {
+		return paymentDAO.GetMaxPaymentID();	
+	}
 }

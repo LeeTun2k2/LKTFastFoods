@@ -12,7 +12,7 @@ import LKTFastFoods.Models.*;
 public class OrderDAO extends DBConnection implements iOrderDAO{
 	@Override
 	public void Add(Order order) {
-		String sql = "exec AddOrder ? ? ?";
+		String sql = "exec AddOrder ?, ?, ?";
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -28,7 +28,7 @@ public class OrderDAO extends DBConnection implements iOrderDAO{
 
 	@Override
 	public void Update(Order order) {
-		String sql = "exec UpdateOrder ? ? ? ?";
+		String sql = "exec UpdateOrder ?, ?, ?, ?";
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -104,5 +104,22 @@ public class OrderDAO extends DBConnection implements iOrderDAO{
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	public int GetMaxOrderID() {
+		String sql = "exec GetMaxOrderID";
+		try {
+			Connection con = super.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			int maxID = 0;
+			while (rs.next())
+				maxID = rs.getInt("maxID");
+			return maxID;
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
 	}
 }

@@ -32,4 +32,8 @@ public class OrderService implements iOrderService {
 	public List<Order> GetAll() {
 		return orderDAO.GetAll();
 	}
+	
+	public int GetMaxOrderID() {
+		return orderDAO.GetMaxOrderID();
+	}
 }

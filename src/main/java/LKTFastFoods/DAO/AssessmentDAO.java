@@ -12,12 +12,12 @@ import LKTFastFoods.Models.*;
 public class AssessmentDAO extends DBConnection implements iAssessmentDAO{
 	@Override
 	public void Add(Assessment assessment) {
-		String sql = "exec AddAssessment ? ? ?";
+		String sql = "exec AddAssessment ?, ?, ? ";
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, assessment.getOrder_id());
-			ps.setFloat(2, assessment.getStar());
+			ps.setInt(2, assessment.getStar());
 			ps.setNString(3, assessment.getComment());
 			ps.execute();
 		} 
@@ -28,7 +28,7 @@ public class AssessmentDAO extends DBConnection implements iAssessmentDAO{
 
 	@Override
 	public void Update(Assessment assessment) {
-		String sql = "exec UpdateAssessment ? ? ? ?";
+		String sql = "exec UpdateAssessment ?, ?, ?, ?";
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -69,7 +69,7 @@ public class AssessmentDAO extends DBConnection implements iAssessmentDAO{
 				Assessment assessment = new Assessment(
 						id,
 						rs.getInt("Order_ID"),
-						rs.getFloat("Stars"),
+						rs.getInt("Stars"),
 						rs.getNString("Comment")	
 				);
 				return assessment;
@@ -93,7 +93,7 @@ public class AssessmentDAO extends DBConnection implements iAssessmentDAO{
 				Assessment assessment = new Assessment(
 						rs.getInt("ID"),
 						rs.getInt("Order_ID"),
-						rs.getFloat("Stars"),
+						rs.getInt("Stars"),
 						rs.getNString("Comment")	
 				);
 				assessments.add(assessment);

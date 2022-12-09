@@ -4,7 +4,7 @@ import java.sql.DriverManager;
 
 public class ConnectJDBC {
 	private final String serverName = "localhost";
-	private final String dbName = "LKTFastFood";
+	private final String dbName = "LKTFastFoods";
 	private final String portNumber = "1433";
 	private final String instance = "";// MSSQLSERVER LEAVE THIS ONE EMPTY IF YOUR SQL IS A SINGLE INSTANCE
 	private final String userID = "sa";
