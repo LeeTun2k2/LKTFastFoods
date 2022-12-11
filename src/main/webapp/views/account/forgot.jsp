@@ -7,21 +7,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="forgot.css">
     <title>Quên mật khẩu</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/account/forgot.css">
 </head>
 
 <body>
-    <section>
-        <div class="form">
-            <h1 style="color:black;margin:50px 150px;">Nhập thông tin để lấy lại tài khoản </h1>
-            <label for="gmail" style=" color:black ; margin:200px 30px;">Điền tên gmail của bạn</label>
-            <input type="text" name="gmail" style="font-size:30px">
-            <a href="./forgot2.jsp"><input id="submit" type="submit" name="submit" value="Tiếp theo"></a>
-        </div>
-
-    </section>
-
+    <div class="d-flex align-items-center justify-content-center vh-100">
+        <form class="py-5 container bg-light">
+            <h2 class="py-4 text-center">QUÊN MẬT KHẨU</h2>
+            <div class="content">
+	            <div class="p-4 wrapper row mx-4">
+		            <label for="username" class="col">Nhập tên tài khoản</label>
+		            <input type="text" name="username" class="col-8">
+		       	</div>
+	            <div class="p-4 wrapper row mx-4">
+		            <label for="phoneNumber" class="col">Nhập số điện thoại</label>
+		            <input type="text" name="phoneNumber" class="col-8">
+	            </div>
+	            <div class="p-4 wraper row mx-4">
+		            <label for="password" class="col">Nhập mật khẩu mới</label>
+		            <input type="text" name="password" class="col-8">	            
+	            </div>
+	            <div class="p-4 wrapper row mx-4">
+		            <label for="repassword" class="col">Nhập lại mật khẩu mới</label>
+		            <input type="text" name="repassword" class="col-8">
+	            </div>
+            </div>
+            <div class="p-4 row justify-content-center">            
+            	<button type="submit">ĐỔI MẬT KHẨU</button>
+            </div>
+        </form>
+    </div>
 </body>
-
 </html>
