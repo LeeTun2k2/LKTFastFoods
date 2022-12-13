@@ -42,9 +42,13 @@ public class AdminHomeController extends HttpServlet {
 		
 		//Load dữ liệu lên bảng menu
 		List<Product> listProduct = productService.GetAll();
-		req.setAttribute("listProduct", listProduct);
+		req.setAttribute("listProduct", listProduct); 
 		
 		//Load dữ liệu lên bảng đơn hàng
+				List<Payment> listOrderInf =paymentService.GetAllInf();
+				req.setAttribute("listOrderInf", listOrderInf);
+				
+		//Load dữ liệu lên bảng đánh giá 
 		List<Order_History> listOrder= order_HistoryService.GetAll();
 		req.setAttribute("listOrder", listOrder);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/views/admin/Home.jsp");

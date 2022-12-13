@@ -13,42 +13,42 @@ import LKTFastFoods.Services.ClientService;
 import LKTFastFoods.Services.iAccountService;
 import LKTFastFoods.Services.iClientService;
 
-
-@WebServlet(urlPatterns = {"/Register"})
+@WebServlet(urlPatterns = { "/Register" })
 
 public class RegisterController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    iAccountService accoutService= new AccountService();
-    iClientService clientService = new ClientService();
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	iAccountService accoutService = new AccountService();
+	iClientService clientService = new ClientService();
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		request.getRequestDispatcher("views/account/register.jsp").forward(request, response);
 	}
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
-		
-		String fullname = request.getParameter("hoten");
-		String ngaysinh=request.getParameter("ngaysinh");
-		boolean Gender= Boolean.parseBoolean(request.getParameter("Gender"));
-		String username=request.getParameter("username");	
-		String password=request.getParameter("password");
-		String sdt=request.getParameter("sdt");
-		String diachi=request.getParameter("address");
-		String email=request.getParameter("email");
-	try {
-		Account account= new Account(username, password,false, true);
-	    accoutService.Add(account);
-	    Client client = new Client(username,fullname ,ngaysinh,Gender,sdt,email,diachi);
-	    clientService.Add(client);
-	    response.sendRedirect(request.getContextPath()+"/Login");
-	} catch (Exception e) {
-		e.printStackTrace();
-	}
-		
 
-	    
+		String fullname = request.getParameter("hoten");
+		String ngaysinh = request.getParameter("ngaysinh");
+		boolean Gender = Boolean.parseBoolean(request.getParameter("Gender"));
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String sdt = request.getParameter("sdt");
+		String diachi = request.getParameter("address");
+		String email = request.getParameter("email");
+
+		Account account = new Account(username, password, false, true);
+		accoutService.Add(account);
+		Client client = new Client(username, fullname, ngaysinh, Gender, sdt, email, diachi);
+		clientService.Add(client);
+			
+			
+		response.sendRedirect(request.getContextPath()+"/Login");
+
 	}
 
 }

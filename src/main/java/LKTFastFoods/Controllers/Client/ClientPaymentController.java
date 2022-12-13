@@ -68,9 +68,9 @@ public class ClientPaymentController extends HttpServlet {
 			new OrderService().Add(order);
 			
 			// create order_info
-			int orderID = new OrderService().GetMaxOrderID();
-			Order_InfoService order_InfoService = new Order_InfoService();
-			
+//			int orderID = new OrderService().GetMaxOrderID();
+//			Order_InfoService order_InfoService = new Order_InfoService();
+//			
 		}
 		catch (Exception e) {
 			System.out.print("Loi sql");

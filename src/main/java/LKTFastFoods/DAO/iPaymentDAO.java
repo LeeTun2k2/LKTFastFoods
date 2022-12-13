@@ -13,4 +13,6 @@ public interface iPaymentDAO {
 	Payment GetOne(int id);
 
 	List<Payment> GetAll();
+	List<Payment> GetAllInf();
+	
 }

@@ -57,16 +57,15 @@ public class VoucherUpdateController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		
-		try {
+		
 			String dateStart=request.getParameter("start-date");
 		    String dateEnd=request.getParameter("end-date");
 			int Value=Integer.parseInt(request.getParameter("value"));
 			int id=Integer.parseInt(request.getParameter("id"));
 			Voucher voucher = new Voucher(id, dateStart, dateEnd, Value);
-		voucherService.Update(voucher);
-	} catch (Exception e) {
-		e.printStackTrace();
-	}
+		    voucherService.Update(voucher);
+	
+	
 		response.sendRedirect(request.getContextPath()+"/admin/Trang-chu");
 	}
 

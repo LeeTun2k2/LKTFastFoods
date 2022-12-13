@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <form action="Register" method="post">
+  <form method="post">
     <div  class="Register">
         <div class="form">
         

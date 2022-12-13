@@ -95,15 +95,14 @@ create table Order_Info (
 	Quantity int not null,
 	Amount int not null,
 	foreign key(Product_ID) references Products(ID) on delete cascade,
-	foreign key(Order_ID) references Orders(ID) on delete cascade,
-	unique(Product_ID, Order_ID)
+	foreign key(Order_ID) references Orders(ID) on delete cascade
 )
 go
 
 -- Assessments
 create table Assessments (
 	ID int identity(0,1) primary key,
-	Order_ID int not null unique references Orders(ID) on delete cascade,
+	Order_ID int not null references Orders(ID) on delete cascade,
 	Stars float not null,
 	Comment nvarchar(200) not null
 )
@@ -115,7 +114,6 @@ create table Order_History (
 	Client_ID varchar(40),
 	Order_ID int,
 	foreign key(Client_ID) references Clients(Username) on delete cascade,
-	foreign key(Order_ID) references Orders(ID) on delete cascade,
-	unique(Client_ID, Order_ID)
+	foreign key(Order_ID) references Orders(ID) on delete cascade
 )
 go

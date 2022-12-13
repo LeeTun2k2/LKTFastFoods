@@ -18,6 +18,10 @@
   25%,75% { opacity: 1 }
 }
 
+img {
+	height: 100px !important;
+}
+
 .notify {
 	display: block;
 	position: fixed;

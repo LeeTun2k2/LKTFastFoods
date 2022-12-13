@@ -34,6 +34,7 @@ as
 	select Products.ID, Name, Image, Description, Amount, Export_Price, Discount 
 	from Products inner join Vouchers on Products.Voucher_ID = Vouchers.ID
 go
+select * from Order_History
 
 create procedure LoadPersonalHistory @client varchar(40)
 as
@@ -57,3 +58,4 @@ create procedure GetMaxOrderID
 as
 	select max(ID) as maxID from Orders
 go
+

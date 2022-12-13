@@ -8,7 +8,7 @@
 			<div class="inline-block col-5 logo" onclick="window.location = 'Menu';">
 				<div class="row">
 					<div>
-						<img class="h-100" src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
+						<img class="" src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
 					</div>
 					<div class="col brand ml-4">
 						<h1 class="brand-name font-weight-bold">LKT FAST FOODS</h1>

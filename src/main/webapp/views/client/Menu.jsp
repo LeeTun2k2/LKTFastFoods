@@ -25,19 +25,22 @@
 		<div class="py-4 container">
 			<div class="row justify-content-center text-center">
 				<div class="col-md-8 col-lg-6">
-					<div class="header">
+					<div class="header pb-5">
 						<h2 class="pb-4">THỰC ĐƠN</h2>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<c:forEach items="${products}" var="product">
+				<c:forEach items="${products}" var="product">
+					<div class="my-5 col-md-6 col-lg-4 col-xl-3">
 						<div id="product-${product.id}" class="single-product">
 							<div class="part-1">
-								<img class="w-100" src="${product.image}" alt="LKTFastFood logo" />
-								<span class="discount">${product.discount}</span>
+								<c:url value="/image?fname=${product.getImage()}"
+									var="imgUrl"></c:url>
+								<label class="col text-right">Hình ảnh :</label>  <img
+									class="imagePic" width="150" height="150" alt="Ảnh sản phẩm"
+									src="${imgUrl}"> <span class="discount">${product.discount}%</span>
 								<ul>
 									<li id="${product.id}"><i class="fas fa-plus"></i></li>
 								</ul>
@@ -46,15 +49,15 @@
 								<h3 class="product-title">${product.name}</h3>
 								<p class="text-justify product-description">${product.description}</p>
 								<div class="d-flex justify-content-between align-items-center">
-									<h4 class="product-old-price">${product.exportPrice}</h4>
+									<h4 class="product-old-price">${product.exportPrice}đ</h4>
 									<div>
-										<h4 class="product-price mr-4">${product.amount}</h4>
+										<h4 class="product-price mr-4">${product.amount}đ</h4>
 									</div>
 								</div>
 							</div>
 						</div>
-					</c:forEach>
-				</div>
+					</div>
+				</c:forEach>
 			</div>
 		</div>
 	</div>

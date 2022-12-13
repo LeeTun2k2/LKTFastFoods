@@ -26,7 +26,7 @@ public class ForgotPassword extends HttpServlet {
 		resp.setCharacterEncoding("UTF-8");
 		req.setCharacterEncoding("UTF-8");
 			
-		String username = req.getParameter("username");
+		String username = req.getParameter("username"); 
 		String phoneNumber = req.getParameter("phoneNumber");
 		String password = req.getParameter("password");
 		String repassword = req.getParameter("repassword");

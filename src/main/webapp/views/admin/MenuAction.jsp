@@ -17,74 +17,34 @@
 	href="${pageContext.request.contextPath}/views/assets/css/adminStyle.css" />
 </head>
 <!-- Header -->
-<header id="header" class="py-4 border-bottom">
-	<!-- Header -->
-	<!-- <form method="post">
- -->
-	<div class="container header">
-		<div class="row">
-			<div class="inline-block col-5 logo"
-				onclick="location.href='${pageContext.request.contextPath}/views/admin/Trang-chu';">
-				<div class="row">
-					<div>
-						<img class="h-100"
-							src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg"
-							alt="LKTFastFood logo">
-					</div>
-					<div class="col brand ml-4">
-						<h1 class="brand-name font-weight-bold">LKT FAST FOODS</h1>
-						<h6 class="brand-slogan font-weight-light">Mang cả tâm tình
-							trên từng sản phẩm</h6>
-					</div>
-				</div>
-			</div>
-			<div
-				class="col inline-block d-flex justify-content-end align-items-center quick-access">
-				<ul class="navbar">
-					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li
-						class="item"><h6>Tài khoản</h6></li></a>
-					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li
-						class="item"><h6>Đánh giá</h6></li></a>
-					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li
-						class="item"><h6>Menu</h6></li></a>
-					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li
-						class="item"><h6>Voucher</h6></li></a>
-				</ul>
-			</div>
-		</div>
-	</div>
-</header>
+		<!-- Header -->
+		<%@ include file="/views/common/adminHeader.jsp"%>	
 <div id="menu-action" class="my-4">
 	<div class="container py-4">
 		<h2 class="py-4 text-center">SẢN PHẨM</h2>
 		<form enctype="multipart/form-data" method="post">
-			<div class="my-4 row">
-				<div class="my-2 row col">
-					<label class="col text-right" for="id">Mã sản phẩm: </label> <input
-						class="col name text-center input" name="id"
-						placeholder="Mã sản phẩm">
-				</div>
-				<div class="my-2 row col">
-					<label class="col text-right" for="name">Tên sản phẩm:</label> <input
-						class="col phone text-center input" name="name"
-						placeholder="Tên sản phẩm">
-				</div>
-			</div>
-
 			<div class="my-2 row col">
-
-				<label class="col text-right">Hình ảnh :</label> <input type="file"
+				<label class="text-right ml-5 pl-5">Hình ảnh :</label> 
+				<input type="file"
 					name="image"
 					onchange="document.querySelector('.profilepic').src = window.URL.createObjectURL(this.files[0]);"
-					accept="image/*" style="cursor: pointer;" /> <img
+					accept="image/*" style="cursor: pointer;" /> 
+				<img
 					class="profilepic" width="150" height="150" alt="Ảnh sản phẩm"
 					onerror="this.src='${pageContext.request.contextPath}/views/img/Default.jpg';this.onerror='';"
 					style="align-items: center;"
 					src="${pageContext.request.contextPath}/views/img/Default.jpg">
 			</div>
-			<hr>
-			<!-- <div class="my-2 row col"> -->
-			b
+			<div class="my-4 row">
+				
+				<div class="my-2 row col">
+					<label class="col text-right" for="name">Tên sản phẩm:</label> <input
+						class="col phone text-center input" name="name"
+						placeholder="Tên sản phẩm">
+				</div>
+				<div class="col-2"></div>
+			</div>
+
 			<div class="my-4 row">
 				<div class="my-2 row col">
 					<label class="col text-right" for="import">Giá nhập:</label> <input

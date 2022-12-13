@@ -126,4 +126,32 @@ public class PaymentDAO extends DBConnection implements iPaymentDAO{
 		}
 		return 0;
 	}
+
+	@Override
+	public List<Payment> GetAllInf() {
+		String sql = "SELECT Payments.ID as PaymentId , Method_ID,DateDone,Payments.Amount,Description,Orders.ID as orderId FROM Payments JOIN Orders ON Payments.ID =Orders.Payment_ID";
+				
+		try {
+			Connection con = super.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			List<Payment> payments = new ArrayList<Payment>();
+			while (rs.next()) {
+				Payment payment = new Payment(
+						rs.getInt("PaymentId"),
+						rs.getInt("Method_ID"),
+						rs.getDate("DateDone"),
+						rs.getInt("Amount"),
+						rs.getNString("Description"),
+						rs.getInt("orderId")
+				);
+				payments.add(payment);
+			}
+			return payments;
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

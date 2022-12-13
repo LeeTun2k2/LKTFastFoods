@@ -21,7 +21,7 @@
 			<div class="inline-block col-5 logo" onclick="location.href='${pageContext.request.contextPath}/views/admin/Trang-chu'">
 				<div class="row">
 					<div>
-						<img class="h-100" src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo">
+						<img style="height: 100px;" src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo">
 					</div>
 					<div class="col brand ml-4">
 						<h1 class="brand-name font-weight-bold">LKT FAST FOODS</h1>
@@ -42,7 +42,7 @@
 	</div>
 	
 </header>
-
+<form method="post">
 <div id="menu-action" class="my-4">
 	<div class="container py-4">
 		<h2 class="py-4 text-center">SẢN PHẨM</h2>
@@ -83,7 +83,7 @@
 			<div class="d-flex justify-content-center col logo">
 				<div>
 					<div class="img d-flex justify-content-center" onclick="location.href='${pageContext.request.contextPath}/views/admin/Trang-chu';">
-						<img src="/LKTFastFood/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo">
+						<img src="/LKTFastFoods/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFoods logo">
 					</div>
 					<div class="py-4 description">
 						<h5>SUBSCRIBE FOR PROMOTIONAL UPDATES</h5>
@@ -97,10 +97,9 @@
 				<div>
 				<h3>DANH SÁCH THÀNH VIÊN</h3>
 					<ul>
-						<li>20110xxx - Trần Quang Khánh.</li>
-						<li>20110xxx - Nguyễn Văn Lâm.</li>
-						<li>20110xxx - Lê Quang Tùng.</li>
-						<li>20110xxx - Lê Minh Tường.</li>
+						<li>20110668 - Nguyễn Văn Lâm.</li>
+						<li>20110746 - Lê Quang Tùng.</li>
+						<li>20110280 - Lê Minh Tường.</li>
 					</ul>
 				</div>
 			</div>

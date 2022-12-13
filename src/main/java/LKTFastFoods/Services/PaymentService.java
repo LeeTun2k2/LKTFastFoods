@@ -36,4 +36,9 @@ public class PaymentService implements iPaymentService {
 	public int GetMaxPaymentID() {
 		return paymentDAO.GetMaxPaymentID();	
 	}
+
+	@Override
+	public List<Payment> GetAllInf() {
+		return paymentDAO.GetAllInf();
+	}
 }

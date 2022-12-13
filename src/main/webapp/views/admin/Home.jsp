@@ -20,7 +20,7 @@
 		
 		<!-- Account -->
 		<%@ include file="/views/admin/Account.jsp"%>
-		
+		<%@ include file="/views/admin/FollowOrder.jsp"%>
 		<!-- Order -->
 		<%@ include file="/views/admin/Order.jsp"%>
 		

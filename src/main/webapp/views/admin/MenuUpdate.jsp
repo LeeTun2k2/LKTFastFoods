@@ -17,67 +17,16 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/views/assets/css/adminStyle.css" />
 </head>
-<!-- Header -->
-<header id="header" class="py-4 border-bottom">
-	<!-- Header -->
-
-	<div class="container header">
-		<div class="row">
-			<div class="inline-block col-5 logo"
-				onclick="location.href='${pageContext.request.contextPath}/views/admin/Trang-chu';">
-				<div class="row">
-					<div>
-						<img class="h-100"
-							src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg"
-							alt="LKTFastFood logo">
-					</div>
-					<div class="col brand ml-4">
-						<h1 class="brand-name font-weight-bold">LKT FAST FOODS</h1>
-						<h6 class="brand-slogan font-weight-light">Mang cả tâm tình
-							trên từng sản phẩm</h6>
-					</div>
-				</div>
-			</div>
-			<div
-				class="col inline-block d-flex justify-content-end align-items-center quick-access">
-				<ul class="navbar">
-					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li
-						class="item"><h6>Tài khoản</h6></li></a>
-					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li
-						class="item"><h6>Đánh giá</h6></li></a>
-					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li
-						class="item"><h6>Menu</h6></li></a>
-					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li
-						class="item"><h6>Voucher</h6></li></a>
-				</ul>
-			</div>
-		</div>
-	</div>
-</header>
-
-<h1>HH ${productUpdate.getImage()}</h1>
+<%@ include file="/views/common/adminHeader.jsp"%>
 
 <div id="menu-action" class="my-4">
 	<div class="container py-4">
 		<h2 class="py-4 text-center">SẢN PHẨM</h2>
 		<form enctype="multipart/form-data" method="post" role="form"
 			accept="">
-
+			
 			<div class="my-4 row">
 				<div class="my-2 row col">
-					<label class="col text-right" for="id">Mã sản phẩm: </label> <input
-						class="col name text-center input" name="id"
-						value="${productUpdate.getId()}" placeholder="Mã sản phẩm">
-				</div>
-				<div class="my-2 row col">
-					<label class="col text-right" for="name">Tên sản phẩm:</label> <input
-						class="col phone text-center input"
-						value="${productUpdate.getName()}" name="name"
-						placeholder="Tên sản phẩm">
-				</div>
-			</div>
-
-			<div class="my-2 row col">
 				<c:url value="/image?fname=${productUpdate.getImage()}" var="imgUrl"></c:url>
 				<label class="col text-right">Hình ảnh :</label> <input type="file"
 					name="image"
@@ -85,7 +34,14 @@
 					accept="image/*" style="cursor: pointer;" /> <img class="imagePic"
 					width="150" height="150" alt="Ảnh sản phẩm" src="${imgUrl}">
 			</div>
-			<div class="my-2 row col">
+				<div class="my-2 row col">
+					<label class="col text-right" for="name">Tên sản phẩm:</label> <input
+						class="col phone text-center input"
+						value="${productUpdate.getName()}" name="name"
+						placeholder="Tên sản phẩm">
+				</div>
+				<div class="col-2"></div>
+			</div>
 				<div class="my-4 row">
 					<div class="my-2 row col">
 						<label class="col text-right" for="import">Giá nhập:</label> <input

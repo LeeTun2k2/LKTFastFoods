@@ -11,11 +11,27 @@ public class Payment{
 		this.amount = amount;
 		this.description = description;
 	}
+	public Payment(int id, int method_id, Date dateDone, int amount, String description ,int orderId) {
+		super();
+		this.id = id;
+		this.method_id = method_id;
+		this.dateDone = dateDone;
+		this.amount = amount;
+		this.description = description;
+		this.orderId=orderId;
+	}
+	public int getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
+	}
 	private int id;
 	private int method_id;
 	private Date dateDone;
 	private int amount;
 	private String description;
+	private int orderId;
 	public int getId() {
 		return id;
 	}

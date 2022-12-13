@@ -143,7 +143,6 @@ public class ProductDAO extends DBConnection implements iProductDAO{
 				);
 				menus.add(menu);
 			}
-			menus.remove(0);
 			return menus;
 		} 
 		catch (Exception e) {

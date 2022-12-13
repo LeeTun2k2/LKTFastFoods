@@ -26,7 +26,7 @@
 					onclick="location.href='${pageContext.request.contextPath}/views/admin/Trang-chu'">
 					<div class="row">
 						<div>
-							<img class="h-100"
+							<img style="height: 100px;"
 								src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg"
 								alt="LKTFastFood logo">
 						</div>
@@ -116,10 +116,9 @@
 					<div>
 						<h3>DANH SÁCH THÀNH VIÊN</h3>
 						<ul>
-							<li>20110xxx - Trần Quang Khánh.</li>
-							<li>20110xxx - Nguyễn Văn Lâm.</li>
-							<li>20110xxx - Lê Quang Tùng.</li>
-							<li>20110xxx - Lê Minh Tường.</li>
+							<li>20110668 - Nguyễn Văn Lâm.</li>
+							<li>20110746 - Lê Quang Tùng.</li>
+							<li>20110280 - Lê Minh Tường.</li>
 						</ul>
 					</div>
 				</div>
