@@ -11,7 +11,8 @@ public class ConnectJDBC {
 	private final String password = "123456";
 
 	public Connection getConnection() throws Exception {
-		String url = "jdbc:sqlserver://" + serverName + ":" + portNumber + "\\" + instance + ";databaseName=" + dbName;
+		//String url = "jdbc:sqlserver://" + serverName + ":" + portNumber + "\\" + instance + ";databaseName=" + dbName;
+		String url = "workstation id=LKTFastFoods.mssql.somee.com;packet size=4096;user id=cnpm_SQLLogin_1;pwd=nvc76rhhnl;data source=LKTFastFoods.mssql.somee.com;persist security info=False;initial catalog=LKTFastFoods";
 		if (instance == null || instance.trim().isEmpty())
 			url = "jdbc:sqlserver://"+serverName+":"+portNumber+";databaseName="+dbName;
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

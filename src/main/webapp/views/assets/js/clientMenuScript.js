@@ -1,5 +1,11 @@
 const buttonAddProducts = document.querySelectorAll(".single-product ul li") 
-let cart = {}
+let cartJSON = localStorage.getItem("cart");
+let cart = JSON.parse(cartJSON);
+if (!(cart)) {
+	cart = {}
+}
+
+
 buttonAddProducts.forEach((button)=>{
 	button.onclick = () => {
 		let product = document.getElementById("product-"+button.id)

@@ -36,11 +36,10 @@
 					<div class="my-5 col-md-6 col-lg-4 col-xl-3">
 						<div id="product-${product.id}" class="single-product">
 							<div class="part-1">
-								<c:url value="/image?fname=${product.getImage()}"
-									var="imgUrl"></c:url>
-								<label class="col text-right">Hình ảnh :</label>  <img
-									class="imagePic" width="150" height="150" alt="Ảnh sản phẩm"
-									src="${imgUrl}"> <span class="discount">${product.discount}%</span>
+
+								<img class="w-100" src="${product.image}" alt="${product.name}" />
+								<span class="discount">${product.discount}%</span>
+
 								<ul>
 									<li id="${product.id}"><i class="fas fa-plus"></i></li>
 								</ul>

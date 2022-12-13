@@ -24,6 +24,7 @@
 		<h2 class="py-4 text-center">SẢN PHẨM</h2>
 		<form enctype="multipart/form-data" method="post" role="form"
 			accept="">
+
 			
 			<div class="my-4 row">
 				<div class="my-2 row col">
@@ -34,6 +35,7 @@
 					accept="image/*" style="cursor: pointer;" /> <img class="imagePic"
 					width="150" height="150" alt="Ảnh sản phẩm" src="${imgUrl}">
 			</div>
+
 				<div class="my-2 row col">
 					<label class="col text-right" for="name">Tên sản phẩm:</label> <input
 						class="col phone text-center input"

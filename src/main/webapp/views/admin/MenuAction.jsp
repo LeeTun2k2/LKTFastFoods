@@ -36,7 +36,7 @@
 					src="${pageContext.request.contextPath}/views/img/Default.jpg">
 			</div>
 			<div class="my-4 row">
-				
+
 				<div class="my-2 row col">
 					<label class="col text-right" for="name">Tên sản phẩm:</label> <input
 						class="col phone text-center input" name="name"

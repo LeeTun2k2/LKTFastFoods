@@ -42,10 +42,10 @@
                         <input type="submit"  value="Đăng Nhập">
                     </div>
                     <div class="input-form">
-                        <p>Bạn Chưa Có Tài Khoản? <a href="${pageContext.request.contextPath}/views/account/register.jsp">Đăng Ký</a></p>
+                        <p>Bạn Chưa Có Tài Khoản? <a href="${pageContext.request.contextPath}/Register">Đăng Ký</a></p>
                     </div>
                     <div class="input-form">
-                        <p>Quên mật khẩu <a href="${pageContext.request.contextPath}/views/account/forgot.jsp">Lấy lại mật khẩu</a></p>
+                        <p>Quên mật khẩu <a href="${pageContext.request.contextPath}/Forgot-Password">Lấy lại mật khẩu</a></p>
                     </div>
                 </form>
             </div>

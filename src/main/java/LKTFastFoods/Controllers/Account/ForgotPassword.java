@@ -33,15 +33,16 @@ public class ForgotPassword extends HttpServlet {
 		
 		Client client = clientService.GetOne(username);
 		
-		if (client != null && phoneNumber == client.getPhoneNumber() && password == repassword)
+		if (client != null && phoneNumber.trim().equals(client.getPhoneNumber().trim()) && password.trim().equals(repassword.trim()))
 		{
 			Account account = accountService.GetOne(username);
 			account.setPassword(password);
 			accountService.Update(account);
+			req.getRequestDispatcher("/Logout").forward(req,resp);
 		}
 		else
 		{
-			req.getRequestDispatcher("/Forgot-Password").forward(req,resp);
+			req.getRequestDispatcher("/Register").forward(req,resp);
 		}
 	}
 }

@@ -12,7 +12,7 @@ import LKTFastFoods.Models.*;
 public class Order_HistoryDAO extends DBConnection implements iOrder_HistoryDAO{
 	@Override
 	public void Add(Order_History order_History) {
-		String sql = "exec AddOrder_History ? ?";
+		String sql = "exec AddOrder_History ?, ?";
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
@@ -27,7 +27,7 @@ public class Order_HistoryDAO extends DBConnection implements iOrder_HistoryDAO{
 
 	@Override
 	public void Update(Order_History order_History) {
-		String sql = "exec UpdateOrder_History ? ? ?";
+		String sql = "exec UpdateOrder_History ?, ?, ?";
 		try {
 			Connection con = super.getConnection();
 			PreparedStatement ps = con.prepareStatement(sql);
