@@ -21,7 +21,7 @@ import LKTFastFoods.Services.*;
 public class ClientHistoryController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private String username = "client";
+	private String username = "";
 
 	private ClientService clientService = new ClientService();
 	

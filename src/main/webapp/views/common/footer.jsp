@@ -20,7 +20,6 @@
 				<div>
 				<h3>DANH SÁCH THÀNH VIÊN</h3>
 					<ul>
-						<li>20110660 - Trần Quang Khánh.</li>
 						<li>20110668 - Nguyễn Văn Lâm.</li>
 						<li>20110746 - Lê Quang Tùng.</li>
 						<li>20110280 - Lê Minh Tường.</li>

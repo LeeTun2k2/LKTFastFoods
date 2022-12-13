@@ -13,36 +13,8 @@
 <!-- Header -->
 
 
-<body><header id="header" class="py-4 border-bottom">
-<!-- Header -->
-
-	<div class="container header">
-		<div class="row">
-			<div class="inline-block col-5 logo" onclick="location.href='${pageContext.request.contextPath}/views/admin/Trang-chu'">
-				<div class="row">
-					<div>
-						<img class="h-100" src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo">
-					</div>
-					<div class="col brand ml-4">
-						<h1 class="brand-name font-weight-bold">LKT FAST FOODS</h1>
-						<h6 class="brand-slogan font-weight-light">Mang cả tâm tình trên từng sản phẩm</h6>
-					</div>
-				</div>
-			</div>
-			<div class="col inline-block d-flex justify-content-end align-items-center quick-access">
-				<ul class="navbar">
-					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li class="item"><h6>Tài khoản </h6></li></a>
-					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li class="item"><h6>Đánh giá </h6></li></a>
-					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li class="item"><h6>Menu </h6></li></a>
-					<a href='${pageContext.request.contextPath}/views/admin/Trang-chu''><li class="item"><h6>Voucher</h6></li></a>
-				</ul>
-				
-			</div>
-		</div>
-	</div>
-	
-</header>
-
+<body>
+<%@ include file="/views/common/adminHeader.jsp"%>
 <div id="menu-action" class="my-4">
 	<div class="container py-4">
 		<h2 class="py-4 text-center">SẢN PHẨM</h2>
@@ -97,10 +69,9 @@
 				<div>
 				<h3>DANH SÁCH THÀNH VIÊN</h3>
 					<ul>
-						<li>20110xxx - Trần Quang Khánh.</li>
-						<li>20110xxx - Nguyễn Văn Lâm.</li>
-						<li>20110xxx - Lê Quang Tùng.</li>
-						<li>20110xxx - Lê Minh Tường.</li>
+						<li>20110668 - Nguyễn Văn Lâm.</li>
+						<li>20110746 - Lê Quang Tùng.</li>
+						<li>20110280 - Lê Minh Tường.</li>
 					</ul>
 				</div>
 			</div>

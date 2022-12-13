@@ -2,7 +2,6 @@ package LKTFastFoods.Controllers.Client;
 
 import java.io.IOException;
 import java.util.Calendar;
-import org.json.*;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -14,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import LKTFastFoods.Models.*;
 import LKTFastFoods.Services.ClientService;
 import LKTFastFoods.Services.OrderService;
-import LKTFastFoods.Services.Order_InfoService;
+import LKTFastFoods.Services.Order_HistoryService;
 import LKTFastFoods.Services.PaymentService;
 import LKTFastFoods.Services.Payment_MethodService;
 
@@ -67,10 +66,10 @@ public class ClientPaymentController extends HttpServlet {
 			order.setDate(new java.sql.Date(Calendar.getInstance().getTime().getTime()));
 			new OrderService().Add(order);
 			
-			// create order_info
-			int orderID = new OrderService().GetMaxOrderID();
-			Order_InfoService order_InfoService = new Order_InfoService();
-			
+			// create order history
+			int orderID = new OrderService().GetMaxOrderID();			
+			Order_History history = new Order_History(0, username, orderID, 5, "");
+			new Order_HistoryService().Add(history);
 		}
 		catch (Exception e) {
 			System.out.print("Loi sql");

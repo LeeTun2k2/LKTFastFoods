@@ -34,3 +34,9 @@ quickAccess.forEach(movePage)
 function openInNewTab(url) {
   window.open(url, '_blank').focus();
 }
+
+const logout = document.querySelector(".logout")
+logout.onclick = () => {
+	location.href = "../Logout"
+}
+

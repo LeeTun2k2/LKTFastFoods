@@ -14,7 +14,6 @@ import LKTFastFoods.Services.*;
 
 @WebServlet(urlPatterns = {"/client/Menu"})
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 5 * 5)
-
 public class ClientMenuController extends HttpServlet {
 	private static final long serialVersionUID = -7372138326553980819L;
 	ProductService productService = new ProductService();

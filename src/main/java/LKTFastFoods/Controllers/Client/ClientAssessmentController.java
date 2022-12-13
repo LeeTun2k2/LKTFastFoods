@@ -28,24 +28,31 @@ public class ClientAssessmentController extends HttpServlet {
 	int star = 5;
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {	
-		Order_HistoryService order_HistoryService = new Order_HistoryService();
-		List<PersonalHistory> personalHistories = order_HistoryService.GetPersonalHistory(username);
-		req.setAttribute("personalHistories", personalHistories);
-		orderId = personalHistories.get(0).getId();
-		req.setAttribute("orderId", orderId);
-		int total = 0;
-		for (PersonalHistory personalHistory : personalHistories) {
-			total += personalHistory.getAmount();
+		try {
+			Order_HistoryService order_HistoryService = new Order_HistoryService();
+			List<PersonalHistory> personalHistories = order_HistoryService.GetPersonalHistory(username);
+			req.setAttribute("personalHistories", personalHistories);
+			
+			orderId = personalHistories.get(0).getId();
+			req.setAttribute("orderId", orderId);
+			int total = 0;
+			for (PersonalHistory personalHistory : personalHistories) {
+				total += personalHistory.getAmount();
+			}
+			req.setAttribute("star", star);
+			req.setAttribute("total", total);
+			req.setAttribute("client", client);
+			DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+			Date date = new Date();
+			dateFormat.format(date);
+			req.setAttribute("dateExport", date);
 		}
-		req.setAttribute("star", star);
-		req.setAttribute("total", total);
-		req.setAttribute("client", client);
-		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		Date date = new Date();
-		dateFormat.format(date);
-		req.setAttribute("dateExport", date);
+		catch(Exception e) {
+			
+		}
 		
-		// dispatcher
+		
+		//dispatcher
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/views/client/Assessment.jsp");
 		dispatcher.forward(req, resp);
 	}

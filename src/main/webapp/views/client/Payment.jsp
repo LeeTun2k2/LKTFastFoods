@@ -88,8 +88,8 @@
 					</tr>
 				</tbody>
 			</table>
-			<input name="data" value="" class=""> 
-			<div class="my-4 d-flex">
+			<input name="data" value="" class="hide"> 
+			<div class="my-4 d-flex justify-content-center">
 				<button id="payment-submit" class="button">Thanh toán</button>
 			</div>
 		</div>

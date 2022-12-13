@@ -15,7 +15,7 @@
 
 <body>
     <div class="d-flex align-items-center justify-content-center vh-100">
-        <form class="py-5 container bg-light">
+        <form method="post" class="py-5 container bg-light">
             <h2 class="py-4 text-center">QUÊN MẬT KHẨU</h2>
             <div class="content">
 	            <div class="p-4 wrapper row mx-4">

@@ -5,10 +5,10 @@
 <!-- Header -->
 	<div class="container header">
 		<div class="row">
-			<div class="inline-block col-5 logo" onclick="location.href='/LKTFastFoods/views/admin/Trang-chu';">
+			<div class="inline-block col-5 logo" onclick="location.href='/LKTFastFoods/admin/Trang-chu';">
 				<div class="row">
 					<div>
-						<img class="h-100" src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
+						<img style="height: 100px;" src="${pageContext.request.contextPath}/views/assets/img/logo/lotteria_logo.svg" alt="LKTFastFood logo"/>
 					</div>
 					<div class="col brand ml-4">
 						<h1 class="brand-name font-weight-bold">LKT FAST FOODS</h1>
@@ -22,6 +22,7 @@
 					<li class="order item"><h6>Đánh giá</h6></li>
 					<li class="menu item"><h6>Menu</h6></li>
 					<li class="voucher item"><h6>Giảm giá</h6></li>
+					<li class="logout item"><h6>Logout</h6></li>
 				</ul>
 			</div>
 		</div>
